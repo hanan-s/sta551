@@ -1,0 +1,614 @@
+---
+title: 'Regression Analysis'
+author: " (You are expected to give a descriptive title)"
+date: " "
+output:
+  html_document: 
+    toc: yes
+    toc_depth: 4
+    toc_float: yes
+    number_sections: yes
+    toc_collapsed: yes
+    code_folding: hide
+    code_download: yes
+    smooth_scroll: yes
+    theme: lumen
+  word_document: 
+    toc: yes
+    toc_depth: 4
+    fig_caption: yes
+    keep_md: yes
+  pdf_document: 
+    toc: yes
+    toc_depth: 4
+    fig_caption: yes
+    number_sections: yes
+    fig_width: 3
+    fig_height: 3
+editor_options: 
+  chunk_output_type: inline
+---
+
+```{r setup, include=FALSE, warning=FALSE}
+if (!require("knitr")) {
+   install.packages("knitr")
+   library(knitr)
+}
+
+if (!require("dplyr")) {
+   install.packages("dplyr")
+   library(dplyr)
+}
+
+if (!require("ggplot2")) {
+   install.packages("ggplot2")
+   library(ggplot2)
+}
+  
+if (!require("patchwork")) {
+   install.packages("patchwork")
+   library(patchwork)
+}
+
+if (!require("reshape2")) {
+   install.packages("reshape2")
+   library(reshape2)
+}
+
+if (!require("tinytex")) {
+   install.packages("tinytex")
+   library(tinytex)
+}
+
+if (!require("caret")) {
+   install.packages("caret")
+   library(caret)
+}
+
+knitr::opts_chunk$set(echo=FALSE,      # suppress code chunk
+                      warning=FALSE,   # suppress warnings 
+                      results=TRUE,   # suppress output
+                      message=FALSE,   # suppress message
+                      comment=NA)
+
+```
+
+
+# Introduction
+
+The National Football League (NFL) is a syndicate of 32 teams which over the last several decades has become not only America's favorite past time but also one of the most profitable leagues globally. In 2023, the league generated over 20 billion dollars in revenue and held 93 spots in the top 100 most watched broadcasts. A large part of the success the league enjoys is due to its scarcity. The regular season is only 18 weeks long, where each team plays 17 games along with one bye week for rest. This is in sharp contrast to other sports leagues where teams might play hundreds of games.
+
+Although the NFL season is short, there is an abundance of data generated each game and over the span of a season. Finding ways to leverage this data is important to the success and health of a team and its players. More recently, fantasy leagues and the growing popularity of sports gambling have amplified the significance of this data for fans and Wall Street investors seeking profitable opportunities.
+
+For this project, we selected a relatively simple data set encompassing box score statistics for each NFL team during the 2023 regular season gathered from pro-football-reference (https://www.pro-football-reference.com/). Our data consists of 544 observations and 25 features (23 predictors and 2 response) which are listed below. Our goal is simple:
+
+1. Can we use box score statistics to predict the points scored by a team via linear regression?
+2. Can we use box score statistics to predict the result of the game via logistic regression?
+
+`Team` : Name of the team \
+`Week` : Week of the season \
+`Day`	 : Day the game was played \
+`Date`	 : Date the game was played \
+`Time`	 : Time the game was played \
+`Result` : W if the won or L if they lost	\
+`OT`	   : If the game went into overtime \
+`Rec`	   : Win-loss record \
+`isHome` : Weather the team played at home or away \
+`Opp`	   : Opponent the team played against \
+`Tm_score`	: Points scored \
+`Opp_score`	: Points scored by opponent \
+`1stD_Off`	: First downs gained by offense \
+`TotYd_Off`	: Total yardage gained by offense \
+`PassY_Off`	: Passing yardage gained by offense \
+`RushY_Off`	: Rushing yardage gained by offense \
+`TO_Off`	  : Turnovers by the offense \
+`1stD_Def`	: First downs given up by defense \
+`TotY_Def`	: Total yardage given up by defense \
+`PassY_Def`	: Passing yardage given up by defense \
+`RushY_Def`	: Rushing yardage given up by defense \
+`TO_Def`	  : Turnovers caused by defense \
+`OffenseExp`	: Expected points by offense \
+`DefenseExp`	: Expected points by defense \
+`SpTms_Exp`   : Expected points by special teams \
+ 
+*Note:* The expected points features are calculated via play by play data. According to pro-football-reference, expected points represent the estimated point value at the start of a given play, based on down, distance, and field position. 
+
+# EDA and Feature Engineering
+
+## Cleaning Data and Feature Engineering
+A quick glance at our data, shows us that almost all of our columns have missing values. We handle this in two ways:
+
+1. The 32 missing values in many of our columns occur because this data includes the bye where no data is generated. We drop these rows.
+2. The other missing values are due to the way our source inputs the data, leaving things blank when an event does not occur. For example, in the OT column, if the game goes into overtime, OT is listed, otherwise, the cell is left blank. Similarly, if a team does not generate a turnover, the entry is blank. We fill these missing values in as zero.
+
+```{r}
+data <- read.csv('/Users/hsalim/sta551/data.txt')
+summary(data)
+```
+
+To clean our data, we set our binary variables to be either 1 or 0. We also create, two new binary variables.
+
+1. We use the `Time` column to create a new variable called `isPrimeTime` which lets us know whether or not the game was played at night on national television.
+2. A `isThursday` feature is created from the `Day` column which lets us know if the game was played on Thursday. Thursday night games are played on a short week which can lead to sloppy play and increased risk of injury.
+
+After dropping unnecessary columns and renaming other columns, we are left with the following features: 
+`OT`,`atHome`, `Tm_score`	, `Opp_score`, `1stD_Off`, `TotYd_Off`, `PassY_Off`, `RushY_Off`, `TO_Off`, `1stD_Def`, `TotY_Def`, `PassY_Def`, `RushY_Def`, `TO_Def`, `OffenseExp`, `DefenseExp`, `SpTms_Exp`, `isPrimeTime`, and `isThursday`.
+
+```{r, results=FALSE}
+# Remove Bye week
+data = data %>% filter(Opp != 'Bye Week')
+
+# Change NA to 0 in TO_Def and TO_Off
+data[is.na(data)] <- 0
+
+# fill in OT
+data$OT[data$OT==""] <- "0"
+data$OT[data$OT=="OT"] <- "1"
+
+# fill in Home Status
+data$atHome[data$atHome==""] <- "1"
+data$atHome[data$atHome=="@"] <- "0"
+
+#Thursday games
+data$isThursday <- with(data, ifelse(Day=="Thu", 1, 0))
+data$isThursday <- as.character(data$isThursday)
+
+#Prime time games
+data$isPrimeTime <- with(data, ifelse(Time=="7:15PM ET" | 
+                                      Time=="8:00PM ET" | 
+                                      Time=="8:15PM ET" |
+                                      Time=="8:20PM ET" , 1, 0))
+data$isPrimeTime <- as.character(data$isPrimeTime)
+
+# Change result to 1 or 0
+data$win <- with(data, ifelse(Result=='W',1,0))
+data$win <- as.character(data$win)
+
+data <- data %>% select(-c(Team, Week, Day, Date, Time, boxscore, Result, Rec, Opp_score, Opp))
+head(data)
+```
+
+## Visualising Distributions
+
+The distribution for our continuous numerical variables for offense and defense are shown below. The first down rate, total yardage, and passing yards look to be normally distributed. The rushing yards have a slight skew but nothing major catches the eye. Turnovers on the other hand have a noticeable right skew which is to be expected. 
+
+
+```{r, include=FALSE, warning=FALSE}
+offenceMelt <- melt(data[5:7])
+offenceYardage <- ggplot(data=offenceMelt, aes(x=value, colour=variable)) + 
+                        geom_density() + 
+                        theme_classic() +
+                        theme(plot.title = element_text(size=10)) +
+                        xlab("Yardage") + 
+                        labs(title = "Offensive Yardage") +
+                        scale_color_discrete(name="Type",
+                                breaks=c(
+                                  "TotYd_Off",
+                                  "PassY_Off",
+                                  "RushY_Off"),
+                                labels=c("Total", 
+                                         "Passing", 
+                                         "Rushing"))
+
+defenseMelt <- melt(data[10:12])
+defenseYardage <- ggplot(data=defenseMelt, aes(x=value, colour=variable)) + 
+                        geom_density() + 
+                        theme_classic() +
+                        theme(plot.title = element_text(size=10)) +
+                        xlab("Yardage") + 
+                        labs(title = "Defense Yardage") +
+                        scale_color_discrete(name="Type",
+                                breaks=c(
+                                  "TotYd_Def",
+                                  "PassY_Def",
+                                  "RushY_Def"),
+                                labels=c("Total", 
+                                         "Passing", 
+                                         "Rushing"))
+```
+
+```{r, include=FALSE, warning=FALSE}
+firstDownsOff <- ggplot(data=data, aes(x=X1stD_Off)) + 
+                        geom_density() + 
+                        theme_classic() +
+                        theme(plot.title = element_text(size=10)) +
+                        xlab("First Downs") + 
+                        labs(title = "First Downs by Offense")
+
+OffenseTO <- ggplot(data=data, aes(x=TO_Off)) + 
+                        geom_bar() + 
+                        theme_classic() +
+                        theme(plot.title = element_text(size=10)) +
+                        xlab("Turnovers") + 
+                        labs(title = "Turnovers by Offense")
+
+firstDownsDef <- ggplot(data=data, aes(x=X1stD_Def)) + 
+                        geom_density() + 
+                        theme_classic() +
+                        theme(plot.title = element_text(size=10)) +
+                        xlab("First Downs") + 
+                        labs(title = "First Downs Given Up by Defense")
+
+DefenseTO <- ggplot(data=data, aes(x=TO_Def)) + 
+                        geom_bar() + 
+                        theme_classic() +
+                        theme(plot.title = element_text(size=10)) +
+                        xlab("Turnovers") + 
+                        labs(title = "Turnovers")
+```
+
+```{r, fig.height = 6, fig.width = 6}
+offenceYardage / (firstDownsOff + OffenseTO)
+```
+```{r, fig.height = 6, fig.width = 6}
+defenseYardage / (firstDownsDef + DefenseTO)
+
+```
+
+```{r, results=FALSE}
+yardageCor <- ggplot(data=data, aes(x=TotYd_Off, y=TotY_Def)) + 
+                        geom_point(size=.5) + 
+                        theme_classic() +
+                        theme(plot.title = element_text(size=4)) +
+                        xlab("Offensive Yards") + 
+                        ylab("Defensive Yards Given Up")
+                        labs(title = "O vs D Yardage Correlation")
+
+turnoverCor <- ggplot(data=data, aes(x=TO_Off, y=TO_Def)) + 
+                        geom_point(size=.5) + 
+                        theme_classic() +
+                        theme(plot.title = element_text(size=5)) +
+                        xlab("Offensive Turnovers") + 
+                        ylab("Defensive Turnovers")
+                        labs(title = "O vs D Turnover Correlation")
+                        
+totYvsPassCor <- ggplot(data=data, aes(x=PassY_Off, y=TotYd_Off)) + 
+                        geom_point(size=.5) + 
+                        theme_classic() +
+                        theme(plot.title = element_text(size=5)) +
+                        xlab("Pass Yards") + 
+                        ylab("Total Yards")
+                        labs(title = "Offensive Yardage Correlation")     
+                        
+totYvsRushCor <- ggplot(data=data, aes(x=RushY_Off, y=TotYd_Off)) + 
+                        geom_point(size=.5) + 
+                        theme_classic() +
+                        theme(plot.title = element_text(size=5)) +
+                        xlab("Rush Yards") + 
+                        ylab("Total Yards")
+                        labs(title = "Offensive Yardage Correlation") 
+                        
+passYvsRushCor <- ggplot(data=data, aes(x=RushY_Off, y=PassY_Off)) + 
+                        geom_point(size=.5) + 
+                        theme_classic() +
+                        theme(plot.title = element_text(size=5)) +
+                        xlab("Rush Yards") + 
+                        ylab("Pass Yards")
+                        labs(title = "Offensive Yardage Correlation")
+```
+
+Comparing the defensive plots vs the offensive plots shows that the distributions are exactly the same but this is to be expected. Since two teams play in a game, we have observations for both teams from the same game. For example, suppose the Eagles play the Giants and gain 400 total yards. This will show up as 400 under `TotYd_Off` but will show up again in another observation of the Giants as `TotY_Def`. We see in the two plots below that the offensive stats do not correlate with the defensive stats for each observation.
+
+```{r, fig.height = 3, fig.width = 5}
+yardageCor + turnoverCor
+```
+
+It should be expected that passing and rushing yards are correlated with total yards which is indeed the case. Surprisingly, there is little correlation between rush and pass yards.
+
+```{r, fig.height = 3, fig.width = 10}
+totYvsPassCor + totYvsRushCor + passYvsRushCor
+```
+
+To further capture relationships between our numerical variables we create a Pearson correlation plot. We see that offensive expected points feature is highly correlated with yardage. The same applies for defensive expected points and yardage given up. And of course the total yardage is dependent on rushing and passing yardage.
+
+```{r, fig.height = 9, fig.width = 10}
+numericData <- data[3:16]
+
+correlationMatrix <- round(cor(numericData, method = "pearson"),2)  
+
+dist <- as.dist((1-correlationMatrix)/2)
+hc <- hclust(dist)
+correlationMatrix <-correlationMatrix[hc$order, hc$order]
+
+correlationMatrixMelt <- melt(correlationMatrix)
+
+ggplot(data = correlationMatrixMelt, aes(x=Var1, y=Var2, fill=value)) + 
+        geom_tile() + 
+        theme_classic() +
+        theme(axis.text.x = element_text(angle = 30, hjust=1),
+              axis.title.x = element_blank(),
+              axis.title.y = element_blank()) +
+        geom_text(aes(Var2, Var1, label = value), color = "black", size = 4) + 
+        labs(title ="Pearson Correlation Heatmap") +
+        scale_fill_gradient2()
+
+```
+
+## Relationship to response variables
+We would now like to take a closer look at the relationship between our features and the response variables.To capture this relationship, we create a scatter plot for each numerical variable against our response variable. For our categorical variables, we create density plots.
+
+```{r, fig.height = 12, fig.width = 10}
+scoreMelt = melt(data[3:16],id='Tm_score')
+
+ggplot(scoreMelt, aes(x = value, y = Tm_score)) + 
+        geom_point() +
+        theme_classic() +
+        theme(plot.title = element_text(size=10)) +
+        facet_wrap(~variable, scales = "free", ncol = 3)
+
+```
+
+```{r, results=FALSE}
+scoreVthursday <- ggplot(data=data, aes(x=Tm_score, colour=isThursday)) + 
+                            geom_density() + 
+                            theme_classic() +
+                            theme(plot.title = element_text(size=10)) +
+                            xlab("Points Scored") + 
+                            ylab("Density")
+                            labs(title = "Points scored on Thursday Games") 
+                            
+                            
+scoreVprime <- ggplot(data=data, aes(x=Tm_score, colour=isPrimeTime)) + 
+                            geom_density() + 
+                            theme_classic() +
+                            theme(plot.title = element_text(size=10)) +
+                            xlab("Points Scored") + 
+                            ylab("Density")
+                            labs(title = "Points scored on Prime Time Games")
+                            
+scoreVot <- ggplot(data=data, aes(x=Tm_score, colour=OT)) + 
+                            geom_density() + 
+                            theme_classic() +
+                            theme(plot.title = element_text(size=10)) +
+                            xlab("Points Scored") + 
+                            ylab("Density")
+                            labs(title = "Points scored in Overtime")
+                            
+scoreVhome <- ggplot(data=data, aes(x=Tm_score, colour=atHome)) + 
+                            geom_density() + 
+                            theme_classic() +
+                            theme(plot.title = element_text(size=10)) +
+                            xlab("Points Scored") + 
+                            ylab("Density")
+                            labs(title = "Points scored on Home vs Away Games")
+
+```
+```{r, fig.height = 4, fig.width = 6}
+(scoreVthursday + scoreVprime) / (scoreVot + scoreVhome)
+```
+
+Observations:
+
+1. Defensive statistics have no bearing on the points scored which is not too surprising since defenses rarely score points.
+2. Special teams expected points has no correlation with points scored. This is a bit surprising since, field goals and extra points are a significant chunk of points scored during a normal game.
+3. Turnovers may have a slight correlation.
+4. A difference in the distribution between games that went into overtime vs those that did not. Similarly, home vs away games have a slight difference in distributions. 
+
+Plotting our features against our second response variable, we see that almost all features have a difference in there distribtions for a win vs a loss. The two turnover features look a bit odd and they may pose problems downstream.
+
+```{r, fig.height = 7, fig.width = 10}
+winMelt = melt(data[c(3:13,19)],id='win')
+
+ggplot(winMelt, aes(x=value, colour=win)) + 
+        geom_density() + 
+        theme_classic() +
+        theme(plot.title = element_text(size=10)) +
+        facet_wrap(~variable, scales = "free")
+
+```
+
+
+# Linear Regression
+Points are primarily scored by the offense and a small amount by the special teams via extra points, field goals, punt and kick returns. In rare cases, points can be scored by the defense. For this to happen, a turnover is required. This fact helps us choose $|.3|$ as the cutoff for selecting features from the correlation plot. This decision is also supported by our scatter plots.
+
+## Model One
+The first model we build is a naive model to set a baseline. From our visualization, we know that offensive expected points was the highest correlated feature to our response variable so we choose this instead of other offensives stats. Let $O=$`OT`,$H$=`atHome`, $P$=`Tm_score`	, $F_O$=`1stD_Off`, $Y_O$ = `TotYd_Off`, $P_O$ = `PassY_Off`, $R_O$ =`RushY_Off`, $TO_O$ =`TO_Off`, $F_D$ =`1stD_Def`, $T_D$ =`TotY_Def`, $P_D$ =`PassY_Def`, $R_D$ = `RushY_Def`, $TO_D$ =`TO_Def`, $E_O$ =`OffenseExp`, $E_D$ = `DefenseExp`, $E_S$`SpTms_Exp`, $N$ = `isPrimeTime`, and $T$ = `isThursday`.
+
+Our first model:
+$$M1: \text{Points} = \alpha_0 + \alpha_1E_D+ \alpha_2E_O + \alpha_3E_S + \alpha_4F_O + \alpha_5 H + \alpha_6 TO_O + \alpha_7 TO_D + \alpha_8 O + \alpha_9 T + \alpha_{10} N + \epsilon$$
+
+
+```{r, fig.height = 4, fig.width = 5}
+naiveModel = lm(Tm_score ~ SpTms_Exp + OffenseExp + DefenseExp + X1stD_Off + TO_Off + TO_Def + atHome + OT + isThursday + isPrimeTime, data = data)
+par(mfrow=c(2,2), mar=c(2,3,2,2))
+plot(naiveModel)
+```
+
+```{r}
+kable(summary(naiveModel)$coef, 
+      caption = "Summarized statistics of the regression coefficients")
+```
+
+From the output of our first model, we see that playing at home had a small effect on the outcome. Furthermore, we know from our correlation plots, that the defensive and special teams had little relationship to our response variable. Our second model is focused on offensive stats and we remove the `atHOME` variable.
+
+## Model 2
+Our second model:
+$$M2: \text{Points} = \alpha_0 + \alpha_1E_O +  \alpha_2F_O + \alpha_3 TO_D + \alpha_4 TO_O + \alpha_5 O + \alpha_6 T + \alpha_7 N + \epsilon$$
+
+```{r, fig.height = 4, fig.width = 5}
+offModel = lm(Tm_score ~ OffenseExp + X1stD_Off + TO_Off + TO_Def + isThursday + OT + isPrimeTime, data = data)   
+par(mfrow=c(2,2), mar=c(2,3,2,2))
+plot(offModel)
+```
+
+```{r}
+kable(summary(offModel)$coef, 
+      caption = "Summarized statistics of the regression coefficients")
+```
+
+## Model Three
+The next two models we build, we replace offensive expected points by the three yardage statistics. The third model uses `TotYd_Off` and fourth model will use `RushY_Off` + `PassY_Off`.
+
+$$M3: \text{Points} = \alpha_0 + \alpha_1Y_O +  \alpha_2F_O + \alpha_3 TO_D + \alpha_4 TO_O + \alpha_5 O + \alpha_6 T + \alpha_7 N + \alpha_8 H + \epsilon$$
+
+```{r, fig.height = 4, fig.width = 5}
+yardModel = lm(Tm_score ~ TotYd_Off + X1stD_Off + TO_Off + TO_Def + atHome + isThursday + OT + isPrimeTime, data = data)   
+par(mfrow=c(2,2), mar=c(2,3,2,2))
+plot(yardModel)
+```
+
+## Model Four
+In our fourth model, we use both rush and passing yards instead of total yards.
+$$M4: \text{Points} = \alpha_0 + \alpha_1R_O + \alpha_1P_O + \alpha_3F_O + \alpha_4 TO_D + \alpha_5 TO_O + \alpha_6 O + \alpha_7 T + \alpha_8 N + \alpha_9 H + \epsilon$$
+
+```{r,fig.height = 4, fig.width = 5}
+test = data[-c(439,479),]
+typeYardage_model = lm(Tm_score ~ X1stD_Off + RushY_Off + PassY_Off + TO_Off + TO_Def + atHome + isThursday + isPrimeTime + OT, data)   
+par(mfrow=c(2,2), mar=c(2,3,2,2))
+plot(typeYardage_model)
+```
+
+```{r, results=FALSE}
+summary(naiveModel)$r.squared
+summary(offModel)$r.squared
+summary(yardModel)$r.squared
+summary(typeYardage_model)$r.squared
+```
+The respective $R^2$ values for our four models are: 
+
+1. naiveModel = 0.772688,
+2. offModel = 0.7309864,
+3. yardModel = 0.6181533,
+4. typeYardage_model = 0.6183322
+
+Our models based on expected value features perform much better than the ones using yardage. This may be because the expected value features are based on other information and thus are more informative. 
+
+```{r}
+#library(MASS)
+#bc = boxcox(Tm_score + 1 ~ X1stD_Off + RushY_Off + PassY_Off + TO_Off + TO_Def + atHome + isThursday + isPrimeTime, 
+#       data = data, 
+#       lambda = seq(-2, 2, length = 20), 
+#       xlab=expression(paste(lambda)))
+
+#title(main = "Box-Cox Transformation: 95% CI of lambda", col.main = "navy", cex.main = 0.9)
+
+```
+
+# Logistic regression
+
+For our logistic models, we will omit the three expected points features because they capture the margin of points between two teams. The first model we build includes all features aside from expected points since our exploration showed a difference in distribution for each feature.
+
+## Model One
+In our fourth model, we use both rush and passing yards instead of total yards.
+$$M1: \text{win} = \alpha_0 + \alpha_1P + \alpha_3F_O + \alpha_4 F_D +  \alpha_5 TO_D + \alpha_6 TO_O + \alpha_7 Y_O + \alpha_8 Y_D + \alpha_9 O + \alpha_{10} T + \alpha_{11} N + \alpha_{12} H + \epsilon$$
+
+```{r}
+data$win <- as.factor(data$win)
+logModel1 = glm(win ~ Tm_score + X1stD_Off + TotYd_Off + TO_Off + X1stD_Def + TotY_Def +  TO_Def + atHome + isThursday + isPrimeTime + OT, data = data, family = binomial)
+
+model1_significant = summary(logModel1)$coef
+kable(model1_significant, caption = "Summary of the significant tests of 
+      the logistic regression model")
+```
+
+From the above output, we can see that our binary variables and first downs given up by the defense have little impact and are not significant. So in our second model, we remove them.
+
+## Model Two
+
+$$M1: \text{win} = \alpha_0 + \alpha_1P + \alpha_2F_O +  \alpha_3 TO_D + \alpha_4 TO_O + \alpha_5 Y_O + \alpha_6 Y_D + \epsilon$$
+
+```{r}
+logModel2 = glm(win ~ Tm_score + X1stD_Off + TotYd_Off + TO_Off + TotY_Def +  TO_Def, data = data, family = binomial)
+
+model2_significant = summary(logModel2)$coef
+kable(model2_significant, caption = "Summary of the significant tests of 
+      the logistic regression model")
+```
+
+# Predictive Modeling 
+
+## Linear Regression 
+We pick our first and third linear regression models to perform predictive modeling. First we split our data $80:20$ between training and test sets. From there, we perform 5-fold cross validation on our training set and then use our test set to get final results for our chosen model.
+```{r}
+trainIndex <- createDataPartition(data$Tm_score, p= 0.8, list = FALSE)
+train <- data[trainIndex,]
+test <- data[-trainIndex,]
+```
+
+
+```{r}
+train.5fold <- trainControl(method = "cv", number = 5)
+
+modelNaive.5fold <- train(Tm_score ~ SpTms_Exp + OffenseExp + DefenseExp + X1stD_Off + TO_Off + TO_Def + atHome + OT + isThursday + isPrimeTime,
+                     data = train,
+                     method = "lm",
+                     trControl = train.5fold)
+
+#print(modelNaive.5fold)
+kable(modelNaive.5fold$results, caption = "Model 1 - Naive")
+```
+
+```{r}
+train.5fold <- trainControl(method = "cv", number = 5)
+
+modelYard.5fold <- train(Tm_score ~ TotYd_Off + X1stD_Off + TO_Off + TO_Def + atHome + isThursday + OT + isPrimeTime,
+                     data = train,
+                     method = "lm",
+                     trControl = train.5fold)
+
+#print(modelYard.5fold)
+kable(modelYard.5fold$results,caption = "Model 2 - Total Yards")
+```
+
+We see that model 1 performs better across all metrics and therefore chose it to be our final model. The final results are:
+
+```{r}
+lmFinal = lm(Tm_score ~ SpTms_Exp + OffenseExp + DefenseExp + X1stD_Off + TO_Off + TO_Def + atHome + OT + isThursday + isPrimeTime, data = train)
+lmFinalPredict = predict(lmFinal, newdata = test)
+lmFinalMean = mean((lmFinalPredict - test$Tm_score)^2)
+
+data.frame(RMSE = RMSE(lmFinalPredict, test$Tm_score),
+           R2 = R2(lmFinalPredict, test$Tm_score),
+           MAE = MAE(lmFinalPredict, test$Tm_score))
+```
+
+## Logistic Regression Cross Validation
+We use our training data to perform 5-fold cross validation and then use our test set to get final results for our chosen model.
+
+```{r}
+train.5fold <- trainControl(method = "cv", number = 5)
+
+modelLogAll.5fold <- train(win ~ Tm_score + X1stD_Off + TotYd_Off + TO_Off + X1stD_Def + TotY_Def +  TO_Def + atHome + isThursday + isPrimeTime + OT,
+                     data = train,
+                     method = "glm",
+                     family=binomial,
+                     trControl = train.5fold)
+
+#print(modelLogAll.5fold)
+kable(modelLogAll.5fold$results, caption="Model 1 - All Features")
+```
+
+```{r}
+train.5fold <- trainControl(method = "cv", number = 5)
+
+modelLog2.5fold <- train(win ~ Tm_score + X1stD_Off + TotYd_Off + TO_Off + TotY_Def +  TO_Def,
+                     data = train,
+                     method = "glm",
+                     family=binomial,
+                     trControl = train.5fold)
+
+#print(modelLog2.5fold)
+kable(modelLog2.5fold$results, caption="Model 2 - Some Features")
+```
+
+Cohen's kappa and accuracy are high in both models. We see little drop off in the second, simpler model and thus choose it as our final model. We now use our entire training data to fit the model and test it on our test data.  A cufusion matrix is provided for the final model, along with various statistics to measure model performance, with accuracy at $90$%.  
+
+```{r}
+#glmFinal = glm(win ~ Tm_score + X1stD_Off + TotYd_Off + TO_Off + TotY_Def +  TO_Def, data = train, family = binomial)
+
+glmFinal <- train(win ~ Tm_score + X1stD_Off + TotYd_Off + TO_Off + TotY_Def +  TO_Def,
+                     data = train,
+                     method = "glm",
+                     family=binomial,)
+
+glmFinalPredict = predict(glmFinal, test)
+
+confusionMatrix(data=glmFinalPredict, test$win)
+```
+
+# Conclusion
+Our models worked fairly well on a limited data set but could use improvement. More data never hurts. Perhaps our models, particularly our linear regression model, would perform better if we had data across multiple years or if we had more features like time of possession, loss of downs, 3rd and 4th down conversions, etc. 
+
+One thing not mentioned in the above sections is the Box-Cox transformation. This was attempted for the linear regression but had little effect on performance and occasionally hurt the performance. Therefore, it was left out.
+
+Furthermore, the expected points features were the best performers for linear regression which is less than ideal since they are opaque variables. It is not clear how they are calculated from other statistics by pro-football-reference and it would be better to have the actual statistics instead.

@@ -1,0 +1,577 @@
+Team,Week,Day,Date,Time,boxscore,Result,OT,Rec,atHome,Opp,Tm_score,Opp_score,1stD_Off,TotYd_Off,PassY_Off,RushY_Off,TO_Off,1stD_Def,TotY_Def,PassY_Def,RushY_Def,TO_Def,OffenseExp,DefenseExp,SpTms_Exp
+Lions,1,Thu,September 7,8:20PM ET,boxscore,W,,1-0,@,Kansas City Chiefs,21,20,19,368,250,118,1,17,316,226,90,1,2.60,4.17,-2.11
+Lions,2,Sun,September 17,1:00PM ET,boxscore,L,OT,1-1,,Seattle Seahawks,31,37,25,418,316,102,3,28,393,311,82,,4.65,-18.00,7.35
+Lions,3,Sun,September 24,1:00PM ET,boxscore,W,,2-1,,Atlanta Falcons,20,6,18,358,243,115,1,16,183,139,44,1,1.31,15.09,-0.59
+Lions,4,Thu,September 28,8:15PM ET,boxscore,W,,3-1,@,Green Bay Packers,34,20,25,401,190,211,1,15,230,203,27,2,8.47,8.60,2.13
+Lions,5,Sun,October 8,1:00PM ET,boxscore,W,,4-1,,Carolina Panthers,42,24,23,377,218,159,,26,342,243,99,3,21.57,-4.10,0.86
+Lions,6,Sun,October 15,4:25PM ET,boxscore,W,,5-1,@,Tampa Bay Buccaneers,20,6,19,380,340,40,,13,251,205,46,1,8.54,11.72,-6.91
+Lions,7,Sun,October 22,1:00PM ET,boxscore,L,,5-2,@,Baltimore Ravens,6,38,18,337,253,84,1,23,503,357,146,1,-6.40,-26.48,3.38
+Lions,8,Mon,October 30,8:15PM ET,boxscore,W,,6-2,,Las Vegas Raiders,26,14,29,486,264,222,3,12,157,77,80,1,0.57,15.25,-2.81
+Lions,9,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+Lions,10,Sun,November 12,4:05PM ET,boxscore,W,,7-2,@,Los Angeles Chargers,41,38,23,533,333,200,,24,421,323,98,1,31.55,-25.22,-2.59
+Lions,11,Sun,November 19,1:00PM ET,boxscore,W,,8-2,,Chicago Bears,31,26,23,338,223,115,4,25,334,151,183,1,11.72,-4.18,-1.30
+Lions,12,Thu,November 23,12:30PM ET,boxscore,L,,8-3,,Green Bay Packers,22,29,25,464,324,140,3,17,377,268,109,,-1.02,-9.91,-1.64
+Lions,13,Sun,December 3,1:00PM ET,boxscore,W,,9-3,@,New Orleans Saints,33,28,18,347,205,142,,23,362,249,113,2,9.55,-6.28,2.62
+Lions,14,Sun,December 10,1:00PM ET,boxscore,L,,9-4,@,Chicago Bears,13,28,13,267,127,140,3,20,336,194,142,,-10.07,-3.69,0.72
+Lions,15,Sun,December 16,8:15PM ET,boxscore,W,,10-4,,Denver Broncos,42,17,29,448,263,185,,20,287,204,83,1,29.35,-3.20,-3.14
+Lions,16,Sun,December 24,1:00PM ET,boxscore,W,,11-4,@,Minnesota Vikings,30,24,28,389,246,143,1,19,390,373,17,4,15.44,-11.43,0.61
+Lions,17,Sat,December 30,8:15PM ET,boxscore,L,,11-5,@,Dallas Cowboys,19,20,21,420,295,125,2,17,384,323,61,2,-0.45,-0.39,-1.92
+Lions,18,Sun,January 7,1:00PM ET,boxscore,W,,12-5,,Minnesota Vikings,30,20,19,381,311,70,,24,448,359,89,2,17.81,-4.55,1.13
+Packers,1,Sun,September 10,4:25PM ET,boxscore,W,,1-0,@,Chicago Bears,38,20,15,329,237,92,,22,311,189,122,2,8.05,6.45,2.11
+Packers,2,Sun,September 17,1:00PM ET,boxscore,L,,1-1,@,Atlanta Falcons,24,25,17,224,140,84,,27,446,235,211,1,7.85,-13.12,0.97
+Packers,3,Sun,September 24,1:00PM ET,boxscore,W,,2-1,,New Orleans Saints,18,17,21,340,245,95,1,15,252,175,77,,1.99,3.02,-6.26
+Packers,4,Thu,September 28,8:15PM ET,boxscore,L,,2-2,,Detroit Lions,20,34,15,230,203,27,2,25,401,190,211,1,-8.60,-8.47,-2.13
+Packers,5,Mon,October 9,8:15PM ET,boxscore,L,,2-3,@,Las Vegas Raiders,13,17,18,285,175,110,3,19,279,183,96,1,-6.99,1.23,5.61
+Packers,6,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+Packers,7,Sun,October 22,4:25PM ET,boxscore,L,,2-4,@,Denver Broncos,17,19,20,331,194,137,1,18,339,194,145,,11.33,-9.89,-2.65
+Packers,8,Sun,October 29,1:00PM ET,boxscore,L,,2-5,,Minnesota Vikings,10,24,16,270,196,74,1,24,346,284,62,1,-10.54,-13.60,9.64
+Packers,9,Sun,November 5,1:00PM ET,boxscore,W,,3-5,,Los Angeles Rams,20,3,21,391,207,184,2,10,187,119,68,2,2.46,20.49,-1.58
+Packers,10,Sun,November 12,1:00PM ET,boxscore,L,,3-6,@,Pittsburgh Steelers,19,23,17,399,283,116,2,21,324,119,205,,8.81,-7.06,-3.18
+Packers,11,Sun,November 19,1:00PM ET,boxscore,W,,4-6,,Los Angeles Chargers,23,20,23,397,295,102,,17,394,244,150,1,12.80,-2.45,-4.58
+Packers,12,Thu,November 23,12:30PM ET,boxscore,W,,5-6,@,Detroit Lions,29,22,17,377,268,109,,25,464,324,140,3,9.91,1.02,1.64
+Packers,13,Sun,December 3,8:20PM ET,boxscore,W,,6-6,,Kansas City Chiefs,27,19,24,382,253,129,,25,337,189,148,1,19.21,-9.54,-0.96
+Packers,14,Mon,December 11,8:15PM ET,boxscore,L,,6-7,@,New York Giants,22,24,19,326,203,123,3,18,367,158,209,2,0.04,-2.39,0.20
+Packers,15,Sun,December 17,1:00PM ET,boxscore,L,,6-8,,Tampa Bay Buccaneers,20,34,18,321,261,60,1,22,452,353,99,1,5.02,-21.36,-0.81
+Packers,16,Sun,December 24,1:00PM ET,boxscore,W,,7-8,@,Carolina Panthers,33,30,25,369,207,162,,26,394,298,96,,19.16,-20.51,1.99
+Packers,17,Sun,December 31,8:20PM ET,boxscore,W,,8-8,@,Minnesota Vikings,33,10,28,470,293,177,1,13,211,144,67,2,22.54,14.27,-12.19
+Packers,18,Sun,January 7,4:25PM ET,boxscore,W,,9-8,,Chicago Bears,17,9,24,432,308,124,1,13,192,117,75,,20.31,1.05,-8.08
+Bears,1,Sun,September 10,4:25PM ET,boxscore,L,,0-1,,Green Bay Packers,20,38,22,311,189,122,2,15,329,237,92,,-6.45,-8.05,-2.11
+Bears,2,Sun,September 17,1:00PM ET,boxscore,L,,0-2,@,Tampa Bay Buccaneers,17,27,14,236,169,67,2,19,437,317,120,,-7.04,-14.15,8.78
+Bears,3,Sun,September 24,4:25PM ET,boxscore,L,,0-3,@,Kansas City Chiefs,10,41,11,203,87,116,2,31,456,303,153,2,-13.60,-20.09,1.47
+Bears,4,Sun,October 1,1:00PM ET,boxscore,L,,0-4,,Denver Broncos,28,31,26,471,300,171,2,17,311,214,97,,13.11,-13.54,-1.50
+Bears,5,Thu,October 5,8:15PM ET,boxscore,W,,1-4,@,Washington Commanders,40,20,18,451,273,178,,23,388,359,29,2,19.81,-4.63,0.51
+Bears,6,Sun,October 15,1:00PM ET,boxscore,L,,1-5,,Minnesota Vikings,13,19,18,275,113,162,3,12,220,174,46,1,-15.39,8.38,-0.79
+Bears,7,Sun,October 22,1:00PM ET,boxscore,W,,2-5,,Las Vegas Raiders,30,12,23,323,150,173,,20,235,196,39,3,12.58,6.37,2.41
+Bears,8,Sun,October 29,8:20PM ET,boxscore,L,,2-6,@,Los Angeles Chargers,13,30,17,295,222,73,2,20,352,298,54,1,-6.71,-7.29,-5.12
+Bears,9,Sun,November 5,1:00PM ET,boxscore,L,,2-7,@,New Orleans Saints,17,24,20,368,212,156,5,18,301,214,87,,-5.71,-5.10,-3.16
+Bears,10,Thu,November 9,8:15PM ET,boxscore,W,,3-7,,Carolina Panthers,16,13,21,295,162,133,,12,213,170,43,,-0.42,6.28,-1.84
+Bears,11,Sun,November 19,1:00PM ET,boxscore,L,,3-8,@,Detroit Lions,26,31,25,334,151,183,1,23,338,223,115,4,4.18,-11.72,1.30
+Bears,12,Mon,November 27,8:15PM ET,boxscore,W,,4-8,@,Minnesota Vikings,12,10,18,317,199,118,2,15,242,169,73,4,-7.29,10.19,-3.55
+Bears,13,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+Bears,14,Sun,December 10,1:00PM ET,boxscore,W,,5-8,,Detroit Lions,28,13,20,336,194,142,,13,267,127,140,3,3.69,10.07,-0.72
+Bears,15,Sun,December 17,1:00PM ET,boxscore,L,,5-9,@,Cleveland Browns,17,20,12,236,148,88,3,14,377,348,29,3,-20.51,20.66,-3.15
+Bears,16,Sun,December 24,4:25PM ET,boxscore,W,,6-9,,Arizona Cardinals,27,16,22,420,170,250,1,16,306,213,93,,9.80,4.06,-4.35
+Bears,17,Sun,December 31,1:00PM ET,boxscore,W,,7-9,,Atlanta Falcons,37,17,22,432,240,192,,15,307,173,134,4,10.27,4.29,7.60
+Bears,18,Sun,January 7,4:25PM ET,boxscore,L,,7-10,@,Green Bay Packers,9,17,13,192,117,75,,24,432,308,124,1,-1.05,-20.31,8.08
+Vikings,1,Sun,September 10,1:00PM ET,boxscore,L,,0-1,,Tampa Bay Buccaneers,17,20,18,369,328,41,3,16,242,169,73,,0.10,3.09,-7.66
+Vikings,2,Thu,September 14,8:15PM ET,boxscore,L,,0-2,@,Philadelphia Eagles,28,34,19,374,346,28,4,24,430,171,259,1,7.44,-14.53,0.51
+Vikings,3,Sun,September 24,1:00PM ET,boxscore,L,,0-3,,Los Angeles Chargers,24,28,29,475,345,130,2,24,475,445,30,1,8.26,-15.21,4.83
+Vikings,4,Sun,October 1,1:00PM ET,boxscore,W,,1-3,@,Carolina Panthers,21,13,14,265,130,135,2,20,232,149,83,1,-5.73,14.29,0.38
+Vikings,5,Sun,October 8,4:25PM ET,boxscore,L,,1-4,,Kansas City Chiefs,20,27,24,329,259,70,1,21,333,266,67,,10.22,-15.55,-0.17
+Vikings,6,Sun,October 15,1:00PM ET,boxscore,W,,2-4,@,Chicago Bears,19,13,12,220,174,46,1,18,275,113,162,3,-8.38,15.39,0.79
+Vikings,7,Mon,October 23,8:15PM ET,boxscore,W,,3-4,,San Francisco 49ers,22,17,24,452,378,74,1,19,325,260,65,3,16.30,-5.43,-6.07
+Vikings,8,Sun,October 29,1:00PM ET,boxscore,W,,4-4,@,Green Bay Packers,24,10,24,346,284,62,1,16,270,196,74,1,13.60,10.54,-9.64
+Vikings,9,Sun,November 5,1:00PM ET,boxscore,W,,5-4,@,Atlanta Falcons,31,28,23,363,217,146,2,18,370,260,110,2,1.90,3.40,-3.43
+Vikings,10,Sun,November 12,1:00PM ET,boxscore,W,,6-4,,New Orleans Saints,27,19,23,388,263,125,,16,280,215,65,2,10.78,0.04,-4.27
+Vikings,11,Sun,November 19,8:20PM ET,boxscore,L,,6-5,@,Denver Broncos,20,21,19,385,210,175,3,13,295,249,46,,-1.96,3.68,-5.21
+Vikings,12,Mon,November 27,8:15PM ET,boxscore,L,,6-6,,Chicago Bears,10,12,15,242,169,73,4,18,317,199,118,2,-10.19,7.29,3.55
+Vikings,13,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+Vikings,14,Sun,December 10,4:05PM ET,boxscore,W,,7-6,@,Las Vegas Raiders,3,0,16,231,99,132,,8,202,146,56,3,-10.05,20.46,-6.43
+Vikings,15,Sat,December 16,1:00PM ET,boxscore,L,OT,7-7,@,Cincinnati Bengals,24,27,24,424,281,143,2,22,378,298,80,1,8.62,-9.29,-1.35
+Vikings,16,Sun,December 24,1:00PM ET,boxscore,L,,7-8,,Detroit Lions,24,30,19,390,373,17,4,28,389,246,143,1,11.43,-15.44,-0.61
+Vikings,17,Sun,December 31,8:20PM ET,boxscore,L,,7-9,,Green Bay Packers,10,33,13,211,144,67,2,28,470,293,177,1,-14.27,-22.54,12.19
+Vikings,18,Sun,January 7,1:00PM ET,boxscore,L,,7-10,@,Detroit Lions,20,30,24,448,359,89,2,19,381,311,70,,4.55,-17.81,-1.13
+Commanders,1,Sun,September 10,1:00PM ET,boxscore,W,,1-0,,Arizona Cardinals,20,16,21,248,156,92,3,13,210,114,96,2,-9.25,19.87,-4.96
+Commanders,2,Sun,September 17,4:25PM ET,boxscore,W,,2-0,@,Denver Broncos,35,33,26,388,266,122,,21,399,277,122,2,16.73,-11.60,-3.13
+Commanders,3,Sun,September 24,1:00PM ET,boxscore,L,,2-1,,Buffalo Bills,3,37,15,230,125,105,5,20,386,218,168,1,-23.07,-10.16,1.39
+Commanders,4,Sun,October 1,1:00PM ET,boxscore,L,OT,2-2,@,Philadelphia Eagles,31,34,26,365,258,107,,23,415,311,104,,17.68,-18.21,-2.47
+Commanders,5,Thu,October 5,8:15PM ET,boxscore,L,,2-3,,Chicago Bears,20,40,23,388,359,29,2,18,451,273,178,,4.63,-19.81,-0.51
+Commanders,6,Sun,October 15,1:00PM ET,boxscore,W,,3-3,@,Atlanta Falcons,24,16,13,193,121,72,,25,402,296,106,3,-0.45,5.68,3.28
+Commanders,7,Sun,October 22,1:00PM ET,boxscore,L,,3-4,@,New York Giants,7,14,14,273,197,76,1,16,356,250,106,2,-16.05,3.64,8.94
+Commanders,8,Sun,October 29,1:00PM ET,boxscore,L,,3-5,,Philadelphia Eagles,31,38,26,472,388,84,1,21,374,315,59,2,10.32,-15.23,-4.32
+Commanders,9,Sun,November 5,1:00PM ET,boxscore,W,,4-5,@,New England Patriots,20,17,23,432,308,124,2,18,327,220,107,1,3.37,-0.28,1.30
+Commanders,10,Sun,November 12,4:25PM ET,boxscore,L,,4-6,@,Seattle Seahawks,26,29,16,356,288,68,1,27,489,369,120,,7.66,-15.28,2.61
+Commanders,11,Sun,November 19,1:00PM ET,boxscore,L,,4-7,,New York Giants,19,31,28,404,230,174,6,13,292,201,91,,-2.78,-0.33,-6.95
+Commanders,12,Thu,November 23,4:30PM ET,boxscore,L,,4-8,@,Dallas Cowboys,10,45,23,376,268,108,1,21,431,331,100,,-9.65,-25.86,2.36
+Commanders,13,Sun,December 3,1:00PM ET,boxscore,L,,4-9,,Miami Dolphins,15,45,11,245,107,138,1,20,406,283,123,,-6.88,-25.98,0.52
+Commanders,14,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+Commanders,15,Sun,December 17,4:05PM ET,boxscore,L,,4-10,@,Los Angeles Rams,20,28,14,297,218,79,1,23,445,249,196,2,-2.14,-8.81,3.33
+Commanders,16,Sun,December 24,1:00PM ET,boxscore,L,,4-11,@,New York Jets,28,30,18,245,143,102,3,26,381,217,164,2,-3.65,15.58,-8.61
+Commanders,17,Sun,December 31,1:00PM ET,boxscore,L,,4-12,,San Francisco 49ers,10,27,12,225,163,62,2,28,408,224,184,,-6.62,-16.30,3.50
+Commanders,18,Sun,January 7,4:25PM ET,boxscore,L,,4-13,,Dallas Cowboys,10,38,12,180,130,50,3,31,440,309,131,1,-9.84,-25.23,7.97
+Eagles,1,Sun,September 10,4:25PM ET,boxscore,W,,1-0,@,New England Patriots,25,20,17,251,154,97,1,24,382,306,76,2,-10.42,12.04,4.39
+Eagles,2,Thu,September 14,8:15PM ET,boxscore,W,,2-0,,Minnesota Vikings,34,28,24,430,171,259,1,19,374,346,28,4,14.53,-7.44,-0.51
+Eagles,3,Mon,September 25,7:15PM ET,boxscore,W,,3-0,@,Tampa Bay Buccaneers,25,11,27,472,271,201,2,12,174,133,41,2,14.08,7.28,-1.78
+Eagles,4,Sun,October 1,1:00PM ET,boxscore,W,OT,4-0,,Washington Commanders,34,31,23,415,311,104,,26,365,258,107,,18.21,-17.68,2.47
+Eagles,5,Sun,October 8,4:05PM ET,boxscore,W,,5-0,@,Los Angeles Rams,23,14,28,454,295,159,1,17,249,195,54,,16.56,-6.25,-2.84
+Eagles,6,Sun,October 15,4:25PM ET,boxscore,L,,5-1,@,New York Jets,14,20,24,348,268,80,4,17,244,155,89,,-5.91,7.52,-8.89
+Eagles,7,Sun,October 22,8:20PM ET,boxscore,W,,6-1,,Miami Dolphins,31,17,26,355,256,99,2,12,244,199,45,1,11.06,7.17,-2.90
+Eagles,8,Sun,October 29,1:00PM ET,boxscore,W,,7-1,@,Washington Commanders,38,31,21,374,315,59,2,26,472,388,84,1,15.23,-10.32,4.32
+Eagles,9,Sun,November 5,4:25PM ET,boxscore,W,,8-1,,Dallas Cowboys,28,23,20,292,183,109,,27,406,333,73,1,15.00,-10.90,2.75
+Eagles,10,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+Eagles,11,Mon,November 20,8:15PM ET,boxscore,W,,9-1,@,Kansas City Chiefs,21,17,16,238,124,114,1,23,336,168,168,2,-2.22,3.40,3.61
+Eagles,12,Sun,November 26,4:25PM ET,boxscore,W,OT,10-1,,Buffalo Bills,37,34,24,378,193,185,2,29,505,332,173,1,7.60,-13.85,9.18
+Eagles,13,Sun,December 3,4:25PM ET,boxscore,L,,10-2,,San Francisco 49ers,19,42,23,333,287,46,,24,456,310,146,,6.22,-33.55,2.11
+Eagles,14,Sun,December 10,8:20PM ET,boxscore,L,,10-3,@,Dallas Cowboys,13,33,17,324,218,106,3,24,394,256,138,1,-4.61,-10.85,-2.77
+Eagles,15,Sun,December 18,8:15PM ET,boxscore,L,,10-4,@,Seattle Seahawks,17,20,23,321,143,178,2,16,297,197,100,,5.20,-6.27,0.39
+Eagles,16,Mon,December 25,4:30PM ET,boxscore,W,,11-4,,New York Giants,33,25,28,465,295,170,2,14,292,186,106,1,10.41,0.93,-3.34
+Eagles,17,Sun,December 31,1:00PM ET,boxscore,L,,11-5,,Arizona Cardinals,31,35,17,275,184,91,1,32,449,228,221,1,13.61,-21.16,3.99
+Eagles,18,Sun,January 7,4:25PM ET,boxscore,L,,11-6,@,New York Giants,10,27,19,299,166,133,4,22,415,306,109,1,-14.58,-7.04,4.08
+Cowboys,1,Sun,September 10,8:20PM ET,boxscore,W,,1-0,@,New York Giants,40,0,18,265,143,122,,14,171,63,108,3,9.37,27.25,5.36
+Cowboys,2,Sun,September 17,4:25PM ET,boxscore,W,,2-0,,New York Jets,30,10,26,382,248,134,,12,215,151,64,4,7.01,14.82,-2.25
+Cowboys,3,Sun,September 24,4:25PM ET,boxscore,L,,2-1,@,Arizona Cardinals,16,28,26,416,231,185,1,20,400,178,222,,6.78,-18.46,-1.14
+Cowboys,4,Sun,October 1,4:25PM ET,boxscore,W,,3-1,,New England Patriots,38,3,22,377,253,124,,10,253,200,53,3,8.01,26.22,0.20
+Cowboys,5,Sun,October 8,8:20PM ET,boxscore,L,,3-2,@,San Francisco 49ers,10,42,8,197,140,57,4,25,421,251,170,1,-23.12,-12.84,5.21
+Cowboys,6,Mon,October 16,8:15PM ET,boxscore,W,,4-2,@,Los Angeles Chargers,20,17,20,342,246,96,1,18,272,219,53,1,8.96,1.30,-5.38
+Cowboys,7,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+Cowboys,8,Sun,October 29,1:00PM ET,boxscore,W,,5-2,,Los Angeles Rams,43,20,24,387,285,102,1,15,280,188,92,1,15.46,8.68,1.87
+Cowboys,9,Sun,November 5,4:25PM ET,boxscore,L,,5-3,@,Philadelphia Eagles,23,28,27,406,333,73,1,20,292,183,109,,10.90,-15.00,-2.75
+Cowboys,10,Sun,November 12,4:25PM ET,boxscore,W,,6-3,,New York Giants,49,17,32,640,472,168,2,16,172,61,111,1,31.00,8.61,-8.00
+Cowboys,11,Sun,November 19,1:00PM ET,boxscore,W,,7-3,@,Carolina Panthers,33,10,23,311,204,107,,13,187,77,110,2,14.98,13.81,-6.04
+Cowboys,12,Thu,November 23,4:30PM ET,boxscore,W,,8-3,,Washington Commanders,45,10,21,431,331,100,,23,376,268,108,1,25.86,9.65,-2.36
+Cowboys,13,Thu,November 30,8:15PM ET,boxscore,W,,9-3,,Seattle Seahawks,41,35,33,411,275,136,,25,406,334,72,1,24.14,-20.82,3.78
+Cowboys,14,Sun,December 10,8:20PM ET,boxscore,W,,10-3,,Philadelphia Eagles,33,13,24,394,256,138,1,17,324,218,106,3,10.85,4.61,2.77
+Cowboys,15,Sun,December 17,4:25PM ET,boxscore,L,,10-4,@,Buffalo Bills,10,31,14,195,106,89,1,28,351,85,266,,-3.23,-19.98,3.82
+Cowboys,16,Sun,December 24,4:25PM ET,boxscore,L,,10-5,@,Miami Dolphins,20,22,19,339,242,97,1,22,375,284,91,,8.66,-6.06,-4.74
+Cowboys,17,Sat,December 30,8:15PM ET,boxscore,W,,11-5,,Detroit Lions,20,19,17,384,323,61,2,21,420,295,125,2,0.39,0.45,1.92
+Cowboys,18,Sun,January 7,4:25PM ET,boxscore,W,,12-5,@,Washington Commanders,38,10,31,440,309,131,1,12,180,130,50,3,25.23,9.84,-7.97
+Giants,1,Sun,September 10,8:20PM ET,boxscore,L,,0-1,,Dallas Cowboys,0,40,14,171,63,108,3,18,265,143,122,,-27.25,-9.37,-5.36
+Giants,2,Sun,September 17,4:05PM ET,boxscore,W,,1-1,@,Arizona Cardinals,31,28,26,439,312,127,1,24,379,228,151,,16.76,-15.48,2.39
+Giants,3,Thu,September 21,8:15PM ET,boxscore,L,,1-2,@,San Francisco 49ers,12,30,10,150,121,29,1,26,441,300,141,,-11.82,-19.00,9.72
+Giants,4,Mon,October 2,8:15PM ET,boxscore,L,,1-3,,Seattle Seahawks,3,24,17,248,136,112,3,13,281,160,121,,-29.37,7.86,-0.33
+Giants,5,Sun,October 8,1:00PM ET,boxscore,L,,1-4,@,Miami Dolphins,16,31,15,268,183,85,,22,524,302,222,3,-6.46,-10.45,1.72
+Giants,6,Sun,October 15,8:20PM ET,boxscore,L,,1-5,@,Buffalo Bills,9,14,20,317,185,132,,22,297,169,128,2,3.02,-2.90,6.70
+Giants,7,Sun,October 22,1:00PM ET,boxscore,W,,2-5,,Washington Commanders,14,7,16,356,250,106,2,14,273,197,76,1,-3.64,16.05,-8.94
+Giants,8,Sun,October 29,1:00PM ET,boxscore,L,OT,2-6,,New York Jets,10,13,12,194,-9,203,,12,251,193,58,2,-20.38,20.78,-1.41
+Giants,9,Sun,November 5,4:25PM ET,boxscore,L,,2-7,@,Las Vegas Raiders,6,30,15,277,154,123,2,15,334,209,125,,-18.96,-1.99,-1.85
+Giants,10,Sun,November 12,4:25PM ET,boxscore,L,,2-8,@,Dallas Cowboys,17,49,16,172,61,111,1,32,640,472,168,2,-8.61,-31.00,8.00
+Giants,11,Sun,November 19,1:00PM ET,boxscore,W,,3-8,@,Washington Commanders,31,19,13,292,201,91,,28,404,230,174,6,0.33,2.78,6.95
+Giants,12,Sun,November 26,1:00PM ET,boxscore,W,,4-8,,New England Patriots,10,7,10,220,162,58,1,18,283,136,147,3,-12.44,12.51,2.86
+Giants,13,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+Giants,14,Mon,December 11,8:15PM ET,boxscore,W,,5-8,,Green Bay Packers,24,22,18,367,158,209,2,19,326,203,123,3,2.39,-0.04,-0.20
+Giants,15,Sun,December 17,1:00PM ET,boxscore,L,,5-9,@,New Orleans Saints,6,24,12,193,133,60,,20,296,209,87,,-15.39,-8.51,7.40
+Giants,16,Mon,December 25,4:30PM ET,boxscore,L,,5-10,@,Philadelphia Eagles,25,33,14,292,186,106,1,28,465,295,170,2,-0.93,-10.41,3.34
+Giants,17,Sun,December 31,1:00PM ET,boxscore,L,,5-11,,Los Angeles Rams,25,26,17,389,284,105,1,22,391,286,105,3,-4.35,-2.70,4.87
+Giants,18,Sun,January 7,4:25PM ET,boxscore,W,,6-11,,Philadelphia Eagles,27,10,22,415,306,109,1,19,299,166,133,4,7.04,14.58,-4.08
+Buccaneers,1,Sun,September 10,1:00PM ET,boxscore,W,,1-0,@,Minnesota Vikings,20,17,16,242,169,73,,18,369,328,41,3,-3.09,-0.10,7.66
+Buccaneers,2,Sun,September 17,1:00PM ET,boxscore,W,,2-0,,Chicago Bears,27,17,19,437,317,120,,14,236,169,67,2,14.15,7.04,-8.78
+Buccaneers,3,Mon,September 25,7:15PM ET,boxscore,L,,2-1,,Philadelphia Eagles,11,25,12,174,133,41,2,27,472,271,201,2,-7.28,-14.08,1.78
+Buccaneers,4,Sun,October 1,1:00PM ET,boxscore,W,,3-1,@,New Orleans Saints,26,9,21,353,239,114,1,16,197,127,70,3,3.79,14.93,-2.25
+Buccaneers,5,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+Buccaneers,6,Sun,October 15,4:25PM ET,boxscore,L,,3-2,,Detroit Lions,6,20,13,251,205,46,1,19,380,340,40,,-11.72,-8.54,6.91
+Buccaneers,7,Sun,October 22,1:00PM ET,boxscore,L,,3-3,,Atlanta Falcons,13,16,21,329,256,73,2,20,401,245,156,3,-2.11,0.80,-1.89
+Buccaneers,8,Thu,October 26,8:15PM ET,boxscore,L,,3-4,@,Buffalo Bills,18,24,17,302,224,78,,25,427,312,115,1,3.38,-9.78,1.24
+Buccaneers,9,Sun,November 5,1:00PM ET,boxscore,L,,3-5,@,Houston Texans,37,39,21,332,251,81,1,26,496,443,53,1,13.23,-16.65,5.81
+Buccaneers,10,Sun,November 12,1:00PM ET,boxscore,W,,4-5,,Tennessee Titans,20,6,19,340,263,77,1,14,209,167,42,1,7.05,14.75,-4.53
+Buccaneers,11,Sun,November 19,4:05PM ET,boxscore,L,,4-6,@,San Francisco 49ers,14,27,22,287,221,66,2,22,420,305,115,,-2.05,-14.22,2.57
+Buccaneers,12,Sun,November 26,1:00PM ET,boxscore,L,,4-7,@,Indianapolis Colts,20,27,17,298,173,125,2,26,394,239,155,1,-0.30,-10.81,-1.18
+Buccaneers,13,Sun,December 3,4:05PM ET,boxscore,W,,5-7,,Carolina Panthers,21,18,15,322,194,128,1,15,282,149,133,1,1.83,4.36,-1.51
+Buccaneers,14,Sun,December 10,1:00PM ET,boxscore,W,,6-7,@,Atlanta Falcons,29,25,16,290,142,148,,23,434,338,96,1,0.22,-7.82,9.28
+Buccaneers,15,Sun,December 17,1:00PM ET,boxscore,W,,7-7,@,Green Bay Packers,34,20,22,452,353,99,1,18,321,261,60,1,21.36,-5.02,0.81
+Buccaneers,16,Sun,December 24,4:05PM ET,boxscore,W,,8-7,,Jacksonville Jaguars,30,12,22,335,265,70,,23,305,268,37,4,8.09,9.43,4.78
+Buccaneers,17,Sun,December 31,1:00PM ET,boxscore,L,,8-8,,New Orleans Saints,13,23,13,349,292,57,4,20,310,202,108,,-3.93,-0.67,-5.28
+Buccaneers,18,Sun,January 7,1:00PM ET,boxscore,W,,9-8,@,Carolina Panthers,9,0,14,228,115,113,,11,199,68,131,2,-7.74,13.18,6.13
+Saints,1,Sun,September 10,1:00PM ET,boxscore,W,,1-0,,Tennessee Titans,16,15,15,351,282,69,2,16,285,181,104,3,0.83,8.64,-4.03
+Saints,2,Mon,September 18,7:15PM ET,boxscore,W,,2-0,@,Carolina Panthers,20,17,23,341,207,134,1,14,239,139,100,1,3.81,6.94,-6.10
+Saints,3,Sun,September 24,1:00PM ET,boxscore,L,,2-1,@,Green Bay Packers,17,18,15,252,175,77,,21,340,245,95,1,-3.02,-1.99,6.26
+Saints,4,Sun,October 1,1:00PM ET,boxscore,L,,2-2,,Tampa Bay Buccaneers,9,26,16,197,127,70,3,21,353,239,114,1,-14.93,-3.79,2.25
+Saints,5,Sun,October 8,1:00PM ET,boxscore,W,,3-2,@,New England Patriots,34,0,17,304,168,136,,8,156,111,45,3,-1.91,33.72,3.40
+Saints,6,Sun,October 15,1:00PM ET,boxscore,L,,3-3,@,Houston Texans,13,20,24,430,341,89,2,19,297,177,120,1,5.96,-8.10,-3.91
+Saints,7,Thu,October 19,8:15PM ET,boxscore,L,,3-4,,Jacksonville Jaguars,24,31,25,407,295,112,1,18,330,217,113,2,-4.83,-2.64,1.15
+Saints,8,Sun,October 29,1:00PM ET,boxscore,W,,4-4,@,Indianapolis Colts,38,27,24,511,350,161,1,19,371,207,164,1,23.78,-8.38,-3.03
+Saints,9,Sun,November 5,1:00PM ET,boxscore,W,,5-4,,Chicago Bears,24,17,18,301,214,87,,20,368,212,156,5,5.10,5.71,3.16
+Saints,10,Sun,November 12,1:00PM ET,boxscore,L,,5-5,@,Minnesota Vikings,19,27,16,280,215,65,2,23,388,263,125,,-0.04,-10.78,4.27
+Saints,11,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+Saints,12,Sun,November 26,1:00PM ET,boxscore,L,,5-6,@,Atlanta Falcons,15,24,22,444,296,148,2,25,396,168,228,2,-3.48,-7.53,0.04
+Saints,13,Sun,December 3,1:00PM ET,boxscore,L,,5-7,,Detroit Lions,28,33,23,362,249,113,2,18,347,205,142,,6.28,-9.55,-2.62
+Saints,14,Sun,December 10,1:00PM ET,boxscore,W,,6-7,,Carolina Panthers,28,6,14,207,110,97,1,16,303,99,204,2,-2.19,20.04,1.99
+Saints,15,Sun,December 17,1:00PM ET,boxscore,W,,7-7,,New York Giants,24,6,20,296,209,87,,12,193,133,60,,8.51,15.39,-7.40
+Saints,16,Thu,December 21,8:15PM ET,boxscore,L,,7-8,@,Los Angeles Rams,22,30,18,339,304,35,1,23,458,325,133,,1.69,-18.19,4.89
+Saints,17,Sun,December 31,1:00PM ET,boxscore,W,,8-8,@,Tampa Bay Buccaneers,23,13,20,310,202,108,,13,349,292,57,4,0.67,3.93,5.28
+Saints,18,Sun,January 7,1:00PM ET,boxscore,W,,9-8,,Atlanta Falcons,48,17,27,400,246,154,,14,389,311,78,3,20.65,11.97,-3.08
+Panthers,1,Sun,September 10,1:00PM ET,boxscore,L,,0-1,@,Atlanta Falcons,10,24,20,281,127,154,3,13,221,91,130,,-16.61,2.92,0.20
+Panthers,2,Mon,September 18,7:15PM ET,boxscore,L,,0-2,,New Orleans Saints,17,20,14,239,139,100,1,23,341,207,134,1,-6.94,-3.81,6.10
+Panthers,3,Sun,September 24,4:05PM ET,boxscore,L,,0-3,@,Seattle Seahawks,27,37,23,378,334,44,,27,425,279,146,1,6.08,-10.21,-4.29
+Panthers,4,Sun,October 1,1:00PM ET,boxscore,L,,0-4,,Minnesota Vikings,13,21,20,232,149,83,1,14,265,130,135,2,-14.29,5.73,-0.38
+Panthers,5,Sun,October 8,1:00PM ET,boxscore,L,,0-5,@,Detroit Lions,24,42,26,342,243,99,3,23,377,218,159,,4.10,-21.57,-0.86
+Panthers,6,Sun,October 15,1:00PM ET,boxscore,L,,0-6,@,Miami Dolphins,21,42,21,296,188,108,,23,424,262,162,1,-6.44,-14.79,0.33
+Panthers,7,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+Panthers,8,Sun,October 29,1:00PM ET,boxscore,W,,1-6,,Houston Texans,15,13,20,224,180,44,,16,229,119,110,1,0.91,3.60,-2.13
+Panthers,9,Sun,November 5,4:05PM ET,boxscore,L,,1-7,,Indianapolis Colts,13,27,17,275,137,138,3,17,198,120,78,1,-23.07,3.93,2.92
+Panthers,10,Thu,November 9,8:15PM ET,boxscore,L,,1-8,@,Chicago Bears,13,16,12,213,170,43,,21,295,162,133,,-6.28,0.42,1.84
+Panthers,11,Sun,November 19,1:00PM ET,boxscore,L,,1-9,,Dallas Cowboys,10,33,13,187,77,110,2,23,311,204,107,,-13.81,-14.98,6.04
+Panthers,12,Sun,November 26,1:00PM ET,boxscore,L,,1-10,@,Tennessee Titans,10,17,19,258,162,96,1,15,264,184,80,,-7.57,-0.52,-0.58
+Panthers,13,Sun,December 3,4:05PM ET,boxscore,L,,1-11,@,Tampa Bay Buccaneers,18,21,15,282,149,133,1,15,322,194,128,1,-4.36,-1.83,1.51
+Panthers,14,Sun,December 10,1:00PM ET,boxscore,L,,1-12,@,New Orleans Saints,6,28,16,303,99,204,2,14,207,110,97,1,-20.04,2.19,-1.99
+Panthers,15,Sun,December 17,1:00PM ET,boxscore,W,,2-12,,Atlanta Falcons,9,7,17,283,154,129,,12,204,152,52,2,-9.24,10.46,0.79
+Panthers,16,Sun,December 24,1:00PM ET,boxscore,L,,2-13,,Green Bay Packers,30,33,26,394,298,96,,25,369,207,162,,20.51,-19.16,-1.99
+Panthers,17,Sun,December 31,1:00PM ET,boxscore,L,,2-14,@,Jacksonville Jaguars,0,26,7,124,67,57,1,16,317,162,155,,-24.80,-6.77,4.36
+Panthers,18,Sun,January 7,1:00PM ET,boxscore,L,,2-15,,Tampa Bay Buccaneers,0,9,11,199,68,131,2,14,228,115,113,,-13.18,7.74,-6.13
+Falcons,1,Sun,September 10,1:00PM ET,boxscore,W,,1-0,,Carolina Panthers,24,10,13,221,91,130,,20,281,127,154,3,-2.92,16.61,-0.20
+Falcons,2,Sun,September 17,1:00PM ET,boxscore,W,,2-0,,Green Bay Packers,25,24,27,446,235,211,1,17,224,140,84,,13.12,-7.85,-0.97
+Falcons,3,Sun,September 24,1:00PM ET,boxscore,L,,2-1,@,Detroit Lions,6,20,16,183,139,44,1,18,358,243,115,1,-15.09,-1.31,0.59
+Falcons,4,Sun,October 1,9:30AM ET,boxscore,L,,2-2,@,Jacksonville Jaguars,7,23,17,287,160,127,3,16,300,195,105,,-15.78,-0.72,0.86
+Falcons,5,Sun,October 8,1:00PM ET,boxscore,W,,3-2,,Houston Texans,21,19,26,447,351,96,2,17,313,249,64,,6.01,-2.73,-1.01
+Falcons,6,Sun,October 15,1:00PM ET,boxscore,L,,3-3,,Washington Commanders,16,24,25,402,296,106,3,13,193,121,72,,-5.68,0.45,-3.28
+Falcons,7,Sun,October 22,1:00PM ET,boxscore,W,,4-3,@,Tampa Bay Buccaneers,16,13,20,401,245,156,3,21,329,256,73,2,-0.80,2.11,1.89
+Falcons,8,Sun,October 29,1:00PM ET,boxscore,L,,4-4,@,Tennessee Titans,23,28,17,342,202,140,1,17,375,226,149,1,-3.34,-4.14,-0.17
+Falcons,9,Sun,November 5,1:00PM ET,boxscore,L,,4-5,,Minnesota Vikings,28,31,18,370,260,110,2,23,363,217,146,2,-3.40,-1.90,3.43
+Falcons,10,Sun,November 12,4:05PM ET,boxscore,L,,4-6,@,Arizona Cardinals,23,25,20,254,70,184,,20,352,230,122,1,4.70,-0.59,-6.18
+Falcons,11,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+Falcons,12,Sun,November 26,1:00PM ET,boxscore,W,,5-6,,New Orleans Saints,24,15,25,396,168,228,2,22,444,296,148,2,7.53,3.48,-0.04
+Falcons,13,Sun,December 3,1:00PM ET,boxscore,W,,6-6,@,New York Jets,13,8,15,194,104,90,,14,259,197,62,3,-11.41,20.36,-1.05
+Falcons,14,Sun,December 10,1:00PM ET,boxscore,L,,6-7,,Tampa Bay Buccaneers,25,29,23,434,338,96,1,16,290,142,148,,7.82,-0.22,-9.28
+Falcons,15,Sun,December 17,1:00PM ET,boxscore,L,,6-8,@,Carolina Panthers,7,9,12,204,152,52,2,17,283,154,129,,-10.46,9.24,-0.79
+Falcons,16,Sun,December 24,1:00PM ET,boxscore,W,,7-8,,Indianapolis Colts,29,10,23,406,229,177,,20,262,170,92,1,13.44,4.99,-1.88
+Falcons,17,Sun,December 31,1:00PM ET,boxscore,L,,7-9,@,Chicago Bears,17,37,15,307,173,134,4,22,432,240,192,,-4.29,-10.27,-7.60
+Falcons,18,Sun,January 7,1:00PM ET,boxscore,L,,7-10,@,New Orleans Saints,17,48,14,389,311,78,3,27,400,246,154,,-11.97,-20.65,3.08
+Rams,1,Sun,September 10,4:25PM ET,boxscore,W,,1-0,@,Seattle Seahawks,30,13,27,426,334,92,,13,180,95,85,,20.95,1.77,-5.73
+Rams,2,Sun,September 17,4:05PM ET,boxscore,L,,1-1,,San Francisco 49ers,23,30,28,386,297,89,2,21,365,206,159,,3.31,-12.36,2.05
+Rams,3,Mon,September 25,8:15PM ET,boxscore,L,,1-2,@,Cincinnati Bengals,16,19,15,292,221,71,2,19,309,242,67,1,-7.34,8.00,-3.79
+Rams,4,Sun,October 1,1:00PM ET,boxscore,W,OT,2-2,@,Indianapolis Colts,29,23,27,467,303,164,1,19,329,196,133,1,15.52,-5.51,-0.74
+Rams,5,Sun,October 8,4:05PM ET,boxscore,L,,2-3,,Philadelphia Eagles,14,23,17,249,195,54,,28,454,295,159,1,6.25,-16.56,2.84
+Rams,6,Sun,October 15,4:25PM ET,boxscore,W,,3-3,,Arizona Cardinals,26,9,17,382,203,179,1,20,345,215,130,2,10.25,12.85,-7.36
+Rams,7,Sun,October 22,4:05PM ET,boxscore,L,,3-4,,Pittsburgh Steelers,17,24,19,354,219,135,1,17,300,214,86,,3.06,-4.14,-6.47
+Rams,8,Sun,October 29,1:00PM ET,boxscore,L,,3-5,@,Dallas Cowboys,20,43,15,280,188,92,1,24,387,285,102,1,-8.68,-15.46,-1.87
+Rams,9,Sun,November 5,1:00PM ET,boxscore,L,,3-6,@,Green Bay Packers,3,20,10,187,119,68,2,21,391,207,184,2,-20.49,-2.46,1.58
+Rams,10,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+Rams,11,Sun,November 19,4:25PM ET,boxscore,W,,4-6,,Seattle Seahawks,17,16,20,267,185,82,1,16,291,223,68,1,2.26,-0.28,0.20
+Rams,12,Sun,November 26,4:05PM ET,boxscore,W,,5-6,@,Arizona Cardinals,37,14,25,457,229,228,1,19,292,219,73,,22.85,1.35,-4.78
+Rams,13,Sun,December 3,4:25PM ET,boxscore,W,,6-6,,Cleveland Browns,36,19,20,399,279,120,,20,327,240,87,1,16.49,1.73,-1.43
+Rams,14,Sun,December 10,1:00PM ET,boxscore,L,OT,6-7,@,Baltimore Ravens,31,37,24,410,282,128,,23,449,310,139,1,7.96,-13.48,-0.55
+Rams,15,Sun,December 17,4:05PM ET,boxscore,W,,7-7,,Washington Commanders,28,20,23,445,249,196,2,14,297,218,79,1,8.81,2.14,-3.33
+Rams,16,Thu,December 21,8:15PM ET,boxscore,W,,8-7,,New Orleans Saints,30,22,23,458,325,133,,18,339,304,35,1,18.19,-1.69,-4.89
+Rams,17,Sun,December 31,1:00PM ET,boxscore,W,,9-7,@,New York Giants,26,25,22,391,286,105,3,17,389,284,105,1,2.70,4.35,-4.87
+Rams,18,Sun,January 7,4:25PM ET,boxscore,W,,10-7,@,San Francisco 49ers,21,20,19,258,149,109,1,20,300,175,125,1,11.30,-9.48,2.42
+Cardinals,1,Sun,September 10,1:00PM ET,boxscore,L,,0-1,@,Washington Commanders,16,20,13,210,114,96,2,21,248,156,92,3,-19.87,9.25,4.96
+Cardinals,2,Sun,September 17,4:05PM ET,boxscore,L,,0-2,,New York Giants,28,31,24,379,228,151,,26,439,312,127,1,15.48,-16.76,-2.39
+Cardinals,3,Sun,September 24,4:25PM ET,boxscore,W,,1-2,,Dallas Cowboys,28,16,20,400,178,222,,26,416,231,185,1,18.46,-6.78,1.14
+Cardinals,4,Sun,October 1,4:25PM ET,boxscore,L,,1-3,@,San Francisco 49ers,16,35,23,362,257,105,,30,395,271,124,,9.72,-30.46,1.63
+Cardinals,5,Sun,October 8,4:05PM ET,boxscore,L,,1-4,,Cincinnati Bengals,20,34,15,294,152,142,3,27,380,287,93,1,-9.49,-4.11,-0.68
+Cardinals,6,Sun,October 15,4:25PM ET,boxscore,L,,1-5,@,Los Angeles Rams,9,26,20,345,215,130,2,17,382,203,179,1,-12.85,-10.25,7.36
+Cardinals,7,Sun,October 22,4:05PM ET,boxscore,L,,1-6,@,Seattle Seahawks,10,20,15,249,122,127,,18,318,203,115,3,-10.34,-2.20,3.57
+Cardinals,8,Sun,October 29,4:25PM ET,boxscore,L,,1-7,,Baltimore Ravens,24,31,22,310,181,129,2,21,268,138,130,,-3.72,-9.20,1.65
+Cardinals,9,Sun,November 5,1:00PM ET,boxscore,L,,1-8,@,Cleveland Browns,0,27,7,58,17,41,3,17,326,213,113,,-35.86,-0.59,7.62
+Cardinals,10,Sun,November 12,4:05PM ET,boxscore,W,,2-8,,Atlanta Falcons,25,23,20,352,230,122,1,20,254,70,184,,0.59,-4.70,6.18
+Cardinals,11,Sun,November 19,1:00PM ET,boxscore,L,,2-9,@,Houston Texans,16,21,20,319,196,123,2,22,419,308,111,3,-1.11,-4.22,0.49
+Cardinals,12,Sun,November 26,4:05PM ET,boxscore,L,,2-10,,Los Angeles Rams,14,37,19,292,219,73,,25,457,229,228,1,-1.35,-22.85,4.78
+Cardinals,13,Sun,December 3,1:00PM ET,boxscore,W,,3-10,@,Pittsburgh Steelers,24,10,18,282,132,150,,18,317,187,130,1,6.39,2.22,7.39
+Cardinals,14,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+Cardinals,15,Sun,December 17,4:05PM ET,boxscore,L,,3-11,,San Francisco 49ers,29,45,22,436,202,234,2,24,406,262,144,,5.83,-26.28,1.07
+Cardinals,16,Sun,December 24,4:25PM ET,boxscore,L,,3-12,@,Chicago Bears,16,27,16,306,213,93,,22,420,170,250,1,-4.06,-9.80,4.35
+Cardinals,17,Sun,December 31,1:00PM ET,boxscore,W,,4-12,@,Philadelphia Eagles,35,31,32,449,228,221,1,17,275,184,91,1,21.16,-13.61,-3.99
+Cardinals,18,Sun,January 7,4:25PM ET,boxscore,L,,4-13,,Seattle Seahawks,20,21,24,466,260,206,,18,327,189,138,,18.03,-10.16,-6.27
+Seahawks,1,Sun,September 10,4:25PM ET,boxscore,L,,0-1,,Los Angeles Rams,13,30,13,180,95,85,,27,426,334,92,,-1.77,-20.95,5.73
+Seahawks,2,Sun,September 17,1:00PM ET,boxscore,W,OT,1-1,@,Detroit Lions,37,31,28,393,311,82,,25,418,316,102,3,18.00,-4.65,-7.35
+Seahawks,3,Sun,September 24,4:05PM ET,boxscore,W,,2-1,,Carolina Panthers,37,27,27,425,279,146,1,23,378,334,44,,10.21,-6.08,4.29
+Seahawks,4,Mon,October 2,8:15PM ET,boxscore,W,,3-1,@,New York Giants,24,3,13,281,160,121,,17,248,136,112,3,-7.86,29.37,0.33
+Seahawks,5,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+Seahawks,6,Sun,October 15,1:00PM ET,boxscore,L,,3-2,@,Cincinnati Bengals,13,17,24,384,297,87,2,15,214,168,46,1,-3.89,1.37,-1.98
+Seahawks,7,Sun,October 22,4:05PM ET,boxscore,W,,4-2,,Arizona Cardinals,20,10,18,318,203,115,3,15,249,122,127,,2.20,10.34,-3.57
+Seahawks,8,Sun,October 29,4:05PM ET,boxscore,W,,5-2,,Cleveland Browns,24,20,17,362,248,114,2,23,385,230,155,3,6.04,0.00,2.50
+Seahawks,9,Sun,November 5,1:00PM ET,boxscore,L,,5-3,@,Baltimore Ravens,3,37,6,151,123,28,2,29,515,217,298,2,-21.73,-17.08,5.23
+Seahawks,10,Sun,November 12,4:25PM ET,boxscore,W,,6-3,,Washington Commanders,29,26,27,489,369,120,,16,356,288,68,1,15.28,-7.66,-2.61
+Seahawks,11,Sun,November 19,4:25PM ET,boxscore,L,,6-4,@,Los Angeles Rams,16,17,16,291,223,68,1,20,267,185,82,1,0.28,-2.26,-0.20
+Seahawks,12,Thu,November 23,8:20PM ET,boxscore,L,,6-5,,San Francisco 49ers,13,31,14,220,132,88,2,23,377,208,169,1,-10.62,-8.06,0.59
+Seahawks,13,Thu,November 30,8:15PM ET,boxscore,L,,6-6,@,Dallas Cowboys,35,41,25,406,334,72,1,33,411,275,136,,20.82,-24.14,-3.78
+Seahawks,14,Sun,December 10,4:05PM ET,boxscore,L,,6-7,@,San Francisco 49ers,16,28,17,324,254,70,2,19,527,354,173,2,-1.61,-19.70,3.47
+Seahawks,15,Sun,December 18,8:15PM ET,boxscore,W,,7-7,,Philadelphia Eagles,20,17,16,297,197,100,,23,321,143,178,2,6.27,-5.20,-0.39
+Seahawks,16,Sun,December 24,1:00PM ET,boxscore,W,,8-7,@,Tennessee Titans,20,17,21,273,215,58,,23,287,125,162,,13.04,-9.37,0.67
+Seahawks,17,Sun,December 31,4:05PM ET,boxscore,L,,8-8,,Pittsburgh Steelers,23,30,17,369,281,88,1,25,468,266,202,,7.51,-20.36,0.67
+Seahawks,18,Sun,January 7,4:25PM ET,boxscore,W,,9-8,@,Arizona Cardinals,21,20,18,327,189,138,,24,466,260,206,,10.16,-18.03,6.27
+49ers,1,Sun,September 10,1:00PM ET,boxscore,W,,1-0,@,Pittsburgh Steelers,30,7,22,391,203,188,1,15,239,198,41,2,9.73,13.55,-0.78
+49ers,2,Sun,September 17,4:05PM ET,boxscore,W,,2-0,@,Los Angeles Rams,30,23,21,365,206,159,,28,386,297,89,2,12.36,-3.31,-2.05
+49ers,3,Thu,September 21,8:15PM ET,boxscore,W,,3-0,,New York Giants,30,12,26,441,300,141,,10,150,121,29,1,19.00,11.82,-9.72
+49ers,4,Sun,October 1,4:25PM ET,boxscore,W,,4-0,,Arizona Cardinals,35,16,30,395,271,124,,23,362,257,105,,30.46,-9.72,-1.63
+49ers,5,Sun,October 8,8:20PM ET,boxscore,W,,5-0,,Dallas Cowboys,42,10,25,421,251,170,1,8,197,140,57,4,12.84,23.12,-5.21
+49ers,6,Sun,October 15,1:00PM ET,boxscore,L,,5-1,@,Cleveland Browns,17,19,15,215,107,108,1,18,334,174,160,2,-6.05,11.32,-7.34
+49ers,7,Mon,October 23,8:15PM ET,boxscore,L,,5-2,@,Minnesota Vikings,17,22,19,325,260,65,3,24,452,378,74,1,5.43,-16.30,6.07
+49ers,8,Sun,October 29,4:25PM ET,boxscore,L,,5-3,,Cincinnati Bengals,17,31,24,460,347,113,3,29,400,266,134,1,9.25,-18.30,2.48
+49ers,9,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+49ers,10,Sun,November 12,1:00PM ET,boxscore,W,,6-3,@,Jacksonville Jaguars,34,3,20,437,293,144,,12,221,162,59,4,15.13,18.16,-3.53
+49ers,11,Sun,November 19,4:05PM ET,boxscore,W,,7-3,,Tampa Bay Buccaneers,27,14,22,420,305,115,,22,287,221,66,2,14.22,2.05,-2.57
+49ers,12,Thu,November 23,8:20PM ET,boxscore,W,,8-3,@,Seattle Seahawks,31,13,23,377,208,169,1,14,220,132,88,2,8.06,10.62,-0.59
+49ers,13,Sun,December 3,4:25PM ET,boxscore,W,,9-3,@,Philadelphia Eagles,42,19,24,456,310,146,,23,333,287,46,,33.55,-6.22,-2.11
+49ers,14,Sun,December 10,4:05PM ET,boxscore,W,,10-3,,Seattle Seahawks,28,16,19,527,354,173,2,17,324,254,70,2,19.70,1.61,-3.47
+49ers,15,Sun,December 17,4:05PM ET,boxscore,W,,11-3,@,Arizona Cardinals,45,29,24,406,262,144,,22,436,202,234,2,26.28,-5.83,-1.07
+49ers,16,Mon,December 25,8:15PM ET,boxscore,L,,11-4,,Baltimore Ravens,19,33,21,429,308,121,5,23,343,241,102,,-4.26,-11.84,1.31
+49ers,17,Sun,December 31,1:00PM ET,boxscore,W,,12-4,@,Washington Commanders,27,10,28,408,224,184,,12,225,163,62,2,16.30,6.62,-3.50
+49ers,18,Sun,January 7,4:25PM ET,boxscore,L,,12-5,,Los Angeles Rams,20,21,20,300,175,125,1,19,258,149,109,1,9.48,-11.30,-2.42
+Bengals,1,Sun,September 10,1:00PM ET,boxscore,L,,0-1,@,Cleveland Browns,3,24,6,142,67,75,,21,350,144,206,2,-23.57,6.77,-3.92
+Bengals,2,Sun,September 17,1:00PM ET,boxscore,L,,0-2,,Baltimore Ravens,24,27,19,282,216,66,1,26,415,237,178,,6.95,-18.73,6.67
+Bengals,3,Mon,September 25,8:15PM ET,boxscore,W,,1-2,,Los Angeles Rams,19,16,19,309,242,67,1,15,292,221,71,2,-8.00,7.34,3.79
+Bengals,4,Sun,October 1,1:00PM ET,boxscore,L,,1-3,@,Tennessee Titans,3,27,14,211,139,72,1,23,400,227,173,1,-9.18,-18.97,1.14
+Bengals,5,Sun,October 8,4:05PM ET,boxscore,W,,2-3,@,Arizona Cardinals,34,20,27,380,287,93,1,15,294,152,142,3,4.11,9.49,0.68
+Bengals,6,Sun,October 15,1:00PM ET,boxscore,W,,3-3,,Seattle Seahawks,17,13,15,214,168,46,1,24,384,297,87,2,-1.37,3.89,1.98
+Bengals,7,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+Bengals,8,Sun,October 29,4:25PM ET,boxscore,W,,4-3,@,San Francisco 49ers,31,17,29,400,266,134,1,24,460,347,113,3,18.30,-9.25,-2.48
+Bengals,9,Sun,November 5,8:20PM ET,boxscore,W,,5-3,,Buffalo Bills,24,18,23,397,343,54,,21,317,249,68,2,14.35,-6.05,-0.96
+Bengals,10,Sun,November 12,1:00PM ET,boxscore,L,,5-4,,Houston Texans,27,30,20,380,314,66,2,28,544,356,188,3,4.94,-13.25,4.46
+Bengals,11,Thu,November 16,8:15PM ET,boxscore,L,,5-5,@,Baltimore Ravens,20,34,20,272,136,136,,22,405,248,157,,4.61,-19.09,-1.27
+Bengals,12,Sun,November 26,1:00PM ET,boxscore,L,,5-6,,Pittsburgh Steelers,10,16,10,222,197,25,1,22,421,268,153,1,-6.04,-4.32,3.05
+Bengals,13,Mon,December 4,8:15PM ET,boxscore,W,OT,6-6,@,Jacksonville Jaguars,34,31,27,491,335,156,1,23,376,305,71,,17.41,-13.98,0.31
+Bengals,14,Sun,December 10,1:00PM ET,boxscore,W,,7-6,,Indianapolis Colts,34,14,19,385,274,111,1,19,272,226,46,2,6.86,4.37,8.34
+Bengals,15,Sat,December 16,1:00PM ET,boxscore,W,OT,8-6,,Minnesota Vikings,27,24,22,378,298,80,1,24,424,281,143,2,9.29,-8.62,1.35
+Bengals,16,Sat,December 23,4:30PM ET,boxscore,L,,8-7,@,Pittsburgh Steelers,11,34,17,368,309,59,3,16,397,284,113,,-7.25,-15.02,1.38
+Bengals,17,Sun,December 31,4:25PM ET,boxscore,L,,8-8,@,Kansas City Chiefs,17,25,20,263,159,104,,15,373,241,132,1,1.31,-5.05,-3.55
+Bengals,18,Sun,January 7,1:00PM ET,boxscore,W,,9-8,,Cleveland Browns,31,14,22,328,145,183,1,13,244,140,104,2,8.81,8.30,-1.32
+Ravens,1,Sun,September 10,1:00PM ET,boxscore,W,,1-0,,Houston Texans,25,9,18,265,155,110,2,18,268,196,72,1,-0.55,15.24,-0.49
+Ravens,2,Sun,September 17,1:00PM ET,boxscore,W,,2-0,@,Cincinnati Bengals,27,24,26,415,237,178,,19,282,216,66,1,18.73,-6.95,-6.67
+Ravens,3,Sun,September 24,1:00PM ET,boxscore,L,OT,2-1,,Indianapolis Colts,19,22,20,364,178,186,2,19,327,188,139,,-5.27,13.57,-10.63
+Ravens,4,Sun,October 1,1:00PM ET,boxscore,W,,3-1,@,Cleveland Browns,28,3,16,296,165,131,1,13,166,73,93,3,2.36,25.42,-2.71
+Ravens,5,Sun,October 8,1:00PM ET,boxscore,L,,3-2,@,Pittsburgh Steelers,10,17,19,335,210,125,3,17,289,202,87,1,-16.12,5.08,3.84
+Ravens,6,Sun,October 15,9:30AM ET,boxscore,W,,4-2,@,Tennessee Titans,24,16,20,360,221,139,1,17,233,104,129,2,3.16,1.30,4.65
+Ravens,7,Sun,October 22,1:00PM ET,boxscore,W,,5-2,,Detroit Lions,38,6,23,503,357,146,1,18,337,253,84,1,26.48,6.40,-3.38
+Ravens,8,Sun,October 29,4:25PM ET,boxscore,W,,6-2,@,Arizona Cardinals,31,24,21,268,138,130,,22,310,181,129,2,9.20,3.72,-1.65
+Ravens,9,Sun,November 5,1:00PM ET,boxscore,W,,7-2,,Seattle Seahawks,37,3,29,515,217,298,2,6,151,123,28,2,17.08,21.73,-5.23
+Ravens,10,Sun,November 12,1:00PM ET,boxscore,L,,7-3,,Cleveland Browns,31,33,18,306,200,106,2,24,373,195,178,2,2.49,-6.32,1.10
+Ravens,11,Thu,November 16,8:15PM ET,boxscore,W,,8-3,,Cincinnati Bengals,34,20,22,405,248,157,,20,272,136,136,,19.09,-4.61,1.27
+Ravens,12,Sun,November 26,8:20PM ET,boxscore,W,,9-3,@,Los Angeles Chargers,20,10,20,361,164,197,,16,279,193,86,4,1.22,16.16,-5.76
+Ravens,13,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+Ravens,14,Sun,December 10,1:00PM ET,boxscore,W,OT,10-3,,Los Angeles Rams,37,31,23,449,310,139,1,24,410,282,128,,13.48,-7.96,0.55
+Ravens,15,Sun,December 17,8:20PM ET,boxscore,W,,11-3,@,Jacksonville Jaguars,23,7,25,396,145,251,1,16,333,258,75,2,8.41,3.03,2.47
+Ravens,16,Mon,December 25,8:15PM ET,boxscore,W,,12-3,@,San Francisco 49ers,33,19,23,343,241,102,,21,429,308,121,5,11.84,4.26,-1.31
+Ravens,17,Sun,December 31,1:00PM ET,boxscore,W,,13-3,,Miami Dolphins,56,19,24,491,331,160,1,20,375,221,154,3,31.09,10.36,-1.21
+Ravens,18,Sat,January 6,4:30PM ET,boxscore,L,,13-4,,Pittsburgh Steelers,10,17,13,224,118,106,2,16,289,134,155,2,-12.05,7.10,-3.24
+Steelers,1,Sun,September 10,1:00PM ET,boxscore,L,,0-1,,San Francisco 49ers,7,30,15,239,198,41,2,22,391,203,188,1,-13.55,-9.73,0.78
+Steelers,2,Mon,September 18,8:15PM ET,boxscore,W,,1-1,,Cleveland Browns,26,22,9,255,200,55,2,20,408,210,198,4,-16.63,19.51,2.81
+Steelers,3,Sun,September 24,8:20PM ET,boxscore,W,,2-1,@,Las Vegas Raiders,23,18,17,333,228,105,,19,362,293,69,3,5.43,3.82,0.12
+Steelers,4,Sun,October 1,1:00PM ET,boxscore,L,,2-2,@,Houston Texans,6,30,12,225,111,114,1,24,451,312,139,,-8.54,-15.66,2.59
+Steelers,5,Sun,October 8,1:00PM ET,boxscore,W,,3-2,,Baltimore Ravens,17,10,17,289,202,87,1,19,335,210,125,3,-5.08,16.12,-3.84
+Steelers,6,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+Steelers,7,Sun,October 22,4:05PM ET,boxscore,W,,4-2,@,Los Angeles Rams,24,17,17,300,214,86,,19,354,219,135,1,4.14,-3.06,6.47
+Steelers,8,Sun,October 29,1:00PM ET,boxscore,L,,4-3,,Jacksonville Jaguars,10,20,17,261,191,70,2,20,377,271,106,3,-3.68,2.59,-2.01
+Steelers,9,Thu,November 2,8:15PM ET,boxscore,W,,5-3,,Tennessee Titans,20,16,22,326,160,166,,23,340,235,105,1,10.92,-3.61,-3.77
+Steelers,10,Sun,November 12,1:00PM ET,boxscore,W,,6-3,,Green Bay Packers,23,19,21,324,119,205,,17,399,283,116,2,7.06,-8.81,3.18
+Steelers,11,Sun,November 19,1:00PM ET,boxscore,L,,6-4,@,Cleveland Browns,10,13,12,249,77,172,,20,259,163,96,1,-6.04,6.18,-1.74
+Steelers,12,Sun,November 26,1:00PM ET,boxscore,W,,7-4,@,Cincinnati Bengals,16,10,22,421,268,153,1,10,222,197,25,1,4.32,6.04,-3.05
+Steelers,13,Sun,December 3,1:00PM ET,boxscore,L,,7-5,,Arizona Cardinals,10,24,18,317,187,130,1,18,282,132,150,,-2.22,-6.39,-7.39
+Steelers,14,Thu,December 7,8:15PM ET,boxscore,L,,7-6,,New England Patriots,18,21,18,264,182,82,1,14,303,222,81,1,-9.55,4.53,2.96
+Steelers,15,Sun,December 16,4:30PM ET,boxscore,L,,7-7,@,Indianapolis Colts,13,30,13,216,142,74,3,19,372,202,170,,-9.21,-11.18,3.34
+Steelers,16,Sat,December 23,4:30PM ET,boxscore,W,,8-7,,Cincinnati Bengals,34,11,16,397,284,113,,17,368,309,59,3,15.02,7.25,-1.38
+Steelers,17,Sun,December 31,4:05PM ET,boxscore,W,,9-7,@,Seattle Seahawks,30,23,25,468,266,202,,17,369,281,88,1,20.36,-7.51,-0.67
+Steelers,18,Sat,January 6,4:30PM ET,boxscore,W,,10-7,@,Baltimore Ravens,17,10,16,289,134,155,2,13,224,118,106,2,-7.10,12.05,3.24
+Browns,1,Sun,September 10,1:00PM ET,boxscore,W,,1-0,,Cincinnati Bengals,24,3,21,350,144,206,2,6,142,67,75,,-6.77,23.57,3.92
+Browns,2,Mon,September 18,8:15PM ET,boxscore,L,,1-1,@,Pittsburgh Steelers,22,26,20,408,210,198,4,9,255,200,55,2,-19.51,16.63,-2.81
+Browns,3,Sun,September 24,1:00PM ET,boxscore,W,,2-1,,Tennessee Titans,27,3,23,341,263,78,1,6,94,68,26,,13.99,13.12,-4.04
+Browns,4,Sun,October 1,1:00PM ET,boxscore,L,,2-2,,Baltimore Ravens,3,28,13,166,73,93,3,16,296,165,131,1,-25.42,-2.36,2.71
+Browns,5,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+Browns,6,Sun,October 15,1:00PM ET,boxscore,W,,3-2,,San Francisco 49ers,19,17,18,334,174,160,2,15,215,107,108,1,-11.32,6.05,7.34
+Browns,7,Sun,October 22,1:00PM ET,boxscore,W,,4-2,@,Indianapolis Colts,39,38,18,316,166,150,2,20,456,288,168,4,-5.30,-1.77,10.23
+Browns,8,Sun,October 29,4:05PM ET,boxscore,L,,4-3,@,Seattle Seahawks,20,24,23,385,230,155,3,17,362,248,114,2,0.00,-6.04,-2.50
+Browns,9,Sun,November 5,1:00PM ET,boxscore,W,,5-3,,Arizona Cardinals,27,0,17,326,213,113,,7,58,17,41,3,0.59,35.86,-7.62
+Browns,10,Sun,November 12,1:00PM ET,boxscore,W,,6-3,@,Baltimore Ravens,33,31,24,373,195,178,2,18,306,200,106,2,6.32,-2.49,-1.10
+Browns,11,Sun,November 19,1:00PM ET,boxscore,W,,7-3,,Pittsburgh Steelers,13,10,20,259,163,96,1,12,249,77,172,,-6.18,6.04,1.74
+Browns,12,Sun,November 26,4:05PM ET,boxscore,L,,7-4,@,Denver Broncos,12,29,19,269,162,107,3,17,294,125,169,1,-14.00,-3.83,0.36
+Browns,13,Sun,December 3,4:25PM ET,boxscore,L,,7-5,@,Los Angeles Rams,19,36,20,327,240,87,1,20,399,279,120,,-1.73,-16.49,1.43
+Browns,14,Sun,December 10,1:00PM ET,boxscore,W,,8-5,,Jacksonville Jaguars,31,27,16,389,307,82,3,20,293,235,58,4,-8.29,8.51,5.12
+Browns,15,Sun,December 17,1:00PM ET,boxscore,W,,9-5,,Chicago Bears,20,17,14,377,348,29,3,12,236,148,88,3,-20.66,20.51,3.15
+Browns,16,Sun,December 24,1:00PM ET,boxscore,W,,10-5,@,Houston Texans,36,22,26,418,364,54,2,20,250,178,72,2,12.38,9.69,-8.56
+Browns,17,Thu,December 28,8:15PM ET,boxscore,W,,11-5,,New York Jets,37,20,20,428,301,127,3,17,360,253,107,2,3.15,7.73,3.99
+Browns,18,Sun,January 7,1:00PM ET,boxscore,L,,11-6,@,Cincinnati Bengals,14,31,13,244,140,104,2,22,328,145,183,1,-8.30,-8.81,1.32
+Titans,1,Sun,September 10,1:00PM ET,boxscore,L,,0-1,@,New Orleans Saints,15,16,16,285,181,104,3,15,351,282,69,2,-8.64,-0.83,4.03
+Titans,2,Sun,September 17,1:00PM ET,boxscore,W,OT,1-1,,Los Angeles Chargers,27,24,22,341,200,141,,19,342,281,61,,9.86,-6.80,-0.06
+Titans,3,Sun,September 24,1:00PM ET,boxscore,L,,1-2,@,Cleveland Browns,3,27,6,94,68,26,,23,341,263,78,1,-13.12,-13.99,4.04
+Titans,4,Sun,October 1,1:00PM ET,boxscore,W,,2-2,,Cincinnati Bengals,27,3,23,400,227,173,1,14,211,139,72,1,18.97,9.18,-1.14
+Titans,5,Sun,October 8,1:00PM ET,boxscore,L,,2-3,@,Indianapolis Colts,16,23,19,348,259,89,1,21,429,236,193,,6.32,-16.77,0.89
+Titans,6,Sun,October 15,9:30AM ET,boxscore,L,,2-4,,Baltimore Ravens,16,24,17,233,104,129,2,20,360,221,139,1,-1.30,-3.16,-4.65
+Titans,7,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+Titans,8,Sun,October 29,1:00PM ET,boxscore,W,,3-4,,Atlanta Falcons,28,23,17,375,226,149,1,17,342,202,140,1,4.14,3.34,0.17
+Titans,9,Thu,November 2,8:15PM ET,boxscore,L,,3-5,@,Pittsburgh Steelers,16,20,23,340,235,105,1,22,326,160,166,,3.61,-10.92,3.77
+Titans,10,Sun,November 12,1:00PM ET,boxscore,L,,3-6,@,Tampa Bay Buccaneers,6,20,14,209,167,42,1,19,340,263,77,1,-14.75,-7.05,4.53
+Titans,11,Sun,November 19,1:00PM ET,boxscore,L,,3-7,@,Jacksonville Jaguars,14,34,12,235,143,92,2,24,389,261,128,,3.96,-21.06,-2.84
+Titans,12,Sun,November 26,1:00PM ET,boxscore,W,,4-7,,Carolina Panthers,17,10,15,264,184,80,,19,258,162,96,1,0.52,7.57,0.58
+Titans,13,Sun,December 3,1:00PM ET,boxscore,L,OT,4-8,,Indianapolis Colts,28,31,25,381,204,177,2,19,355,300,55,2,3.29,-2.48,-6.88
+Titans,14,Mon,December 11,8:15PM ET,boxscore,W,,5-8,@,Miami Dolphins,28,27,22,403,320,83,3,20,366,208,158,1,1.86,0.67,-0.42
+Titans,15,Sun,December 17,1:00PM ET,boxscore,L,OT,5-9,,Houston Texans,16,19,14,204,138,66,1,21,340,192,148,1,-8.62,9.00,-3.38
+Titans,16,Sun,December 24,1:00PM ET,boxscore,L,,5-10,,Seattle Seahawks,17,20,23,287,125,162,,21,273,215,58,,9.37,-13.04,-0.67
+Titans,17,Sun,December 31,1:00PM ET,boxscore,L,,5-11,@,Houston Texans,3,26,11,187,134,53,1,20,312,201,111,,-18.77,-3.77,1.45
+Titans,18,Sun,January 7,1:00PM ET,boxscore,W,,6-11,,Jacksonville Jaguars,28,20,19,327,152,175,1,20,362,280,82,2,7.12,0.86,0.99
+Jaguars,1,Sun,September 10,1:00PM ET,boxscore,W,,1-0,@,Indianapolis Colts,31,21,20,342,237,105,2,18,280,215,65,3,-9.80,17.62,2.44
+Jaguars,2,Sun,September 17,1:00PM ET,boxscore,L,,1-1,,Kansas City Chiefs,9,17,18,271,197,74,1,19,399,298,101,3,-10.72,-7.01,6.76
+Jaguars,3,Sun,September 24,1:00PM ET,boxscore,L,,1-2,,Houston Texans,17,37,22,404,288,116,2,15,366,280,86,,3.88,-13.65,-10.46
+Jaguars,4,Sun,October 1,9:30AM ET,boxscore,W,,2-2,,Atlanta Falcons,23,7,16,300,195,105,,17,287,160,127,3,0.72,15.78,-0.86
+Jaguars,5,Sun,October 8,9:30AM ET,boxscore,W,,3-2,@,Buffalo Bills,25,20,29,474,278,196,2,18,388,359,29,2,13.93,-6.27,2.21
+Jaguars,6,Sun,October 15,1:00PM ET,boxscore,W,,4-2,,Indianapolis Colts,37,20,17,233,148,85,1,18,354,310,44,4,-0.16,12.21,4.88
+Jaguars,7,Thu,October 19,8:15PM ET,boxscore,W,,5-2,@,New Orleans Saints,31,24,18,330,217,113,2,25,407,295,112,1,2.64,4.83,-1.15
+Jaguars,8,Sun,October 29,1:00PM ET,boxscore,W,,6-2,@,Pittsburgh Steelers,20,10,20,377,271,106,3,17,261,191,70,2,-2.59,3.68,2.01
+Jaguars,9,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+Jaguars,10,Sun,November 12,1:00PM ET,boxscore,L,,6-3,,San Francisco 49ers,3,34,12,221,162,59,4,20,437,293,144,,-18.16,-15.13,3.53
+Jaguars,11,Sun,November 19,1:00PM ET,boxscore,W,,7-3,,Tennessee Titans,34,14,24,389,261,128,,12,235,143,92,2,21.06,-3.96,2.84
+Jaguars,12,Sun,November 26,1:00PM ET,boxscore,W,,8-3,@,Houston Texans,24,21,22,445,364,81,1,19,352,261,91,,13.92,-8.20,3.64
+Jaguars,13,Mon,December 4,8:15PM ET,boxscore,L,OT,8-4,,Cincinnati Bengals,31,34,23,376,305,71,,27,491,335,156,1,13.98,-17.41,-0.31
+Jaguars,14,Sun,December 10,1:00PM ET,boxscore,L,,8-5,@,Cleveland Browns,27,31,20,293,235,58,4,16,389,307,82,3,-8.51,8.29,-5.12
+Jaguars,15,Sun,December 17,8:20PM ET,boxscore,L,,8-6,,Baltimore Ravens,7,23,16,333,258,75,2,25,396,145,251,1,-3.03,-8.41,-2.47
+Jaguars,16,Sun,December 24,4:05PM ET,boxscore,L,,8-7,@,Tampa Bay Buccaneers,12,30,23,305,268,37,4,22,335,265,70,,-9.43,-8.09,-4.78
+Jaguars,17,Sun,December 31,1:00PM ET,boxscore,W,,9-7,,Carolina Panthers,26,0,16,317,162,155,,7,124,67,57,1,6.77,24.80,-4.36
+Jaguars,18,Sun,January 7,1:00PM ET,boxscore,L,,9-8,@,Tennessee Titans,20,28,20,362,280,82,2,19,327,152,175,1,-0.86,-7.12,-0.99
+Colts,1,Sun,September 10,1:00PM ET,boxscore,L,,0-1,,Jacksonville Jaguars,21,31,18,280,215,65,3,20,342,237,105,2,-17.62,9.80,-2.44
+Colts,2,Sun,September 17,1:00PM ET,boxscore,W,,1-1,@,Houston Texans,31,20,19,353,227,126,,24,389,337,52,1,14.21,-7.88,4.04
+Colts,3,Sun,September 24,1:00PM ET,boxscore,W,OT,2-1,@,Baltimore Ravens,22,19,19,327,188,139,,20,364,178,186,2,-13.57,5.27,10.63
+Colts,4,Sun,October 1,1:00PM ET,boxscore,L,OT,2-2,,Los Angeles Rams,23,29,19,329,196,133,1,27,467,303,164,1,5.51,-15.52,0.74
+Colts,5,Sun,October 8,1:00PM ET,boxscore,W,,3-2,,Tennessee Titans,23,16,21,429,236,193,,19,348,259,89,1,16.77,-6.32,-0.89
+Colts,6,Sun,October 15,1:00PM ET,boxscore,L,,3-3,@,Jacksonville Jaguars,20,37,18,354,310,44,4,17,233,148,85,1,-12.21,0.16,-4.88
+Colts,7,Sun,October 22,1:00PM ET,boxscore,L,,3-4,,Cleveland Browns,38,39,20,456,288,168,4,18,316,166,150,2,1.77,5.30,-10.23
+Colts,8,Sun,October 29,1:00PM ET,boxscore,L,,3-5,,New Orleans Saints,27,38,19,371,207,164,1,24,511,350,161,1,8.38,-23.78,3.03
+Colts,9,Sun,November 5,4:05PM ET,boxscore,W,,4-5,@,Carolina Panthers,27,13,17,198,120,78,1,17,275,137,138,3,-3.93,23.07,-2.92
+Colts,10,Sun,November 12,9:30AM ET,boxscore,W,,5-5,@,New England Patriots,10,6,14,264,194,70,1,21,340,173,167,2,0.31,0.42,0.28
+Colts,11,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+Colts,12,Sun,November 26,1:00PM ET,boxscore,W,,6-5,,Tampa Bay Buccaneers,27,20,26,394,239,155,1,17,298,173,125,2,10.81,0.30,1.18
+Colts,13,Sun,December 3,1:00PM ET,boxscore,W,OT,7-5,@,Tennessee Titans,31,28,19,355,300,55,2,25,381,204,177,2,2.48,-3.29,6.88
+Colts,14,Sun,December 10,1:00PM ET,boxscore,L,,7-6,@,Cincinnati Bengals,14,34,19,272,226,46,2,19,385,274,111,1,-4.37,-6.86,-8.34
+Colts,15,Sun,December 16,4:30PM ET,boxscore,W,,8-6,,Pittsburgh Steelers,30,13,19,372,202,170,,13,216,142,74,3,11.18,9.21,-3.34
+Colts,16,Sun,December 24,1:00PM ET,boxscore,L,,8-7,@,Atlanta Falcons,10,29,20,262,170,92,1,23,406,229,177,,-4.99,-13.44,1.88
+Colts,17,Sun,December 31,1:00PM ET,boxscore,W,,9-7,,Las Vegas Raiders,23,20,16,349,215,134,,26,370,286,84,,11.41,-8.69,1.73
+Colts,18,Sat,January 6,8:15PM ET,boxscore,L,,9-8,,Houston Texans,19,23,21,360,133,227,1,16,306,246,60,,3.98,-5.93,1.85
+Texans,1,Sun,September 10,1:00PM ET,boxscore,L,,0-1,@,Baltimore Ravens,9,25,18,268,196,72,1,18,265,155,110,2,-15.24,0.55,0.49
+Texans,2,Sun,September 17,1:00PM ET,boxscore,L,,0-2,,Indianapolis Colts,20,31,24,389,337,52,1,19,353,227,126,,7.88,-14.21,-4.04
+Texans,3,Sun,September 24,1:00PM ET,boxscore,W,,1-2,@,Jacksonville Jaguars,37,17,15,366,280,86,,22,404,288,116,2,13.65,-3.88,10.46
+Texans,4,Sun,October 1,1:00PM ET,boxscore,W,,2-2,,Pittsburgh Steelers,30,6,24,451,312,139,,12,225,111,114,1,15.66,8.54,-2.59
+Texans,5,Sun,October 8,1:00PM ET,boxscore,L,,2-3,@,Atlanta Falcons,19,21,17,313,249,64,,26,447,351,96,2,2.73,-6.01,1.01
+Texans,6,Sun,October 15,1:00PM ET,boxscore,W,,3-3,,New Orleans Saints,20,13,19,297,177,120,1,24,430,341,89,2,8.10,-5.96,3.91
+Texans,7,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+Texans,8,Sun,October 29,1:00PM ET,boxscore,L,,3-4,@,Carolina Panthers,13,15,16,229,119,110,1,20,224,180,44,,-3.60,-0.91,2.13
+Texans,9,Sun,November 5,1:00PM ET,boxscore,W,,4-4,,Tampa Bay Buccaneers,39,37,26,496,443,53,1,21,332,251,81,1,16.65,-13.23,-5.81
+Texans,10,Sun,November 12,1:00PM ET,boxscore,W,,5-4,@,Cincinnati Bengals,30,27,28,544,356,188,3,20,380,314,66,2,13.25,-4.94,-4.46
+Texans,11,Sun,November 19,1:00PM ET,boxscore,W,,6-4,,Arizona Cardinals,21,16,22,419,308,111,3,20,319,196,123,2,4.22,1.11,-0.49
+Texans,12,Sun,November 26,1:00PM ET,boxscore,L,,6-5,,Jacksonville Jaguars,21,24,19,352,261,91,,22,445,364,81,1,8.20,-13.92,-3.64
+Texans,13,Sun,December 3,1:00PM ET,boxscore,W,,7-5,,Denver Broncos,22,17,14,353,264,89,,16,282,164,118,3,-1.15,4.63,0.91
+Texans,14,Sun,December 10,1:00PM ET,boxscore,L,,7-6,@,New York Jets,6,30,10,135,54,81,,20,347,268,79,1,-22.37,-2.85,3.08
+Texans,15,Sun,December 17,1:00PM ET,boxscore,W,OT,8-6,@,Tennessee Titans,19,16,21,340,192,148,1,14,204,138,66,1,-9.00,8.62,3.38
+Texans,16,Sun,December 24,1:00PM ET,boxscore,L,,8-7,,Cleveland Browns,22,36,20,250,178,72,2,26,418,364,54,2,-9.69,-12.38,8.56
+Texans,17,Sun,December 31,1:00PM ET,boxscore,W,,9-7,,Tennessee Titans,26,3,20,312,201,111,,11,187,134,53,1,3.77,18.77,-1.45
+Texans,18,Sat,January 6,8:15PM ET,boxscore,W,,10-7,@,Indianapolis Colts,23,19,16,306,246,60,,21,360,133,227,1,5.93,-3.98,-1.85
+Chargers,1,Sun,September 10,4:25PM ET,boxscore,L,,0-1,,Miami Dolphins,34,36,30,433,200,233,,30,536,466,70,2,18.83,-26.53,3.22
+Chargers,2,Sun,September 17,1:00PM ET,boxscore,L,OT,0-2,@,Tennessee Titans,24,27,19,342,281,61,,22,341,200,141,,6.80,-9.86,0.06
+Chargers,3,Sun,September 24,1:00PM ET,boxscore,W,,1-2,@,Minnesota Vikings,28,24,24,475,445,30,1,29,475,345,130,2,15.21,-8.26,-4.83
+Chargers,4,Sun,October 1,4:05PM ET,boxscore,W,,2-2,,Las Vegas Raiders,24,17,16,305,150,155,1,22,264,188,76,3,4.86,8.27,-6.07
+Chargers,5,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+Chargers,6,Mon,October 16,8:15PM ET,boxscore,L,,2-3,,Dallas Cowboys,17,20,18,272,219,53,1,20,342,246,96,1,-1.30,-8.96,5.38
+Chargers,7,Sun,October 22,4:25PM ET,boxscore,L,,2-4,@,Kansas City Chiefs,17,31,16,358,219,139,2,25,483,415,68,2,3.03,-19.19,2.58
+Chargers,8,Sun,October 29,8:20PM ET,boxscore,W,,3-4,,Chicago Bears,30,13,20,352,298,54,1,17,295,222,73,2,7.29,6.71,5.12
+Chargers,9,Mon,November 6,8:15PM ET,boxscore,W,,4-4,@,New York Jets,27,6,14,191,107,84,,17,270,206,64,3,-6.47,25.20,1.49
+Chargers,10,Sun,November 12,4:05PM ET,boxscore,L,,4-5,,Detroit Lions,38,41,24,421,323,98,1,23,533,333,200,,25.22,-31.55,2.59
+Chargers,11,Sun,November 19,1:00PM ET,boxscore,L,,4-6,@,Green Bay Packers,20,23,17,394,244,150,1,23,397,295,102,,2.45,-12.80,4.58
+Chargers,12,Sun,November 26,8:20PM ET,boxscore,L,,4-7,,Baltimore Ravens,10,20,16,279,193,86,4,20,361,164,197,,-16.16,-1.22,5.76
+Chargers,13,Sun,December 3,1:00PM ET,boxscore,W,,5-7,@,New England Patriots,6,0,13,241,212,29,,13,257,109,148,1,-9.06,13.06,4.71
+Chargers,14,Sun,December 10,4:25PM ET,boxscore,L,,5-8,,Denver Broncos,7,24,17,283,207,76,2,19,322,216,106,1,-21.60,1.17,2.39
+Chargers,15,Thu,December 14,8:15PM ET,boxscore,L,,5-9,@,Las Vegas Raiders,21,63,18,326,234,92,5,20,378,254,124,,-15.82,-22.25,-3.05
+Chargers,16,Sat,December 23,8:00PM ET,boxscore,L,,5-10,,Buffalo Bills,22,24,18,273,175,98,,16,335,230,105,3,-4.02,-7.67,9.12
+Chargers,17,Sun,December 31,4:25PM ET,boxscore,L,,5-11,@,Denver Broncos,9,16,17,301,215,86,1,16,313,212,101,,-5.75,-2.08,-1.20
+Chargers,18,Sun,January 7,4:25PM ET,boxscore,L,,5-12,,Kansas City Chiefs,12,13,22,353,235,118,1,12,268,145,123,1,-8.89,3.31,1.81
+Raiders,1,Sun,September 10,4:25PM ET,boxscore,W,,1-0,@,Denver Broncos,17,16,22,261,200,61,1,22,260,166,94,,9.59,-10.75,3.68
+Raiders,2,Sun,September 17,1:00PM ET,boxscore,L,,1-1,@,Buffalo Bills,10,38,13,240,185,55,3,29,450,267,183,,-4.89,-27.19,3.85
+Raiders,3,Sun,September 24,8:20PM ET,boxscore,L,,1-2,,Pittsburgh Steelers,18,23,19,362,293,69,3,17,333,228,105,,-3.82,-5.43,-0.12
+Raiders,4,Sun,October 1,4:05PM ET,boxscore,L,,1-3,@,Los Angeles Chargers,17,24,22,264,188,76,3,16,305,150,155,1,-8.27,-4.86,6.07
+Raiders,5,Mon,October 9,8:15PM ET,boxscore,W,,2-3,,Green Bay Packers,17,13,19,279,183,96,1,18,285,175,110,3,-1.23,6.99,-5.61
+Raiders,6,Sun,October 15,4:05PM ET,boxscore,W,,3-3,,New England Patriots,21,17,19,348,264,84,1,17,259,176,83,1,2.79,-3.68,5.62
+Raiders,7,Sun,October 22,1:00PM ET,boxscore,L,,3-4,@,Chicago Bears,12,30,20,235,196,39,3,23,323,150,173,,-6.37,-12.58,-2.41
+Raiders,8,Mon,October 30,8:15PM ET,boxscore,L,,3-5,@,Detroit Lions,14,26,12,157,77,80,1,29,486,264,222,3,-15.25,-0.57,2.81
+Raiders,9,Sun,November 5,4:25PM ET,boxscore,W,,4-5,,New York Giants,30,6,15,334,209,125,,15,277,154,123,2,1.99,18.96,1.85
+Raiders,10,Sun,November 12,8:20PM ET,boxscore,W,,5-5,,New York Jets,16,12,15,274,126,148,2,14,365,257,108,1,-8.01,7.21,3.38
+Raiders,11,Sun,November 19,1:00PM ET,boxscore,L,,5-6,@,Miami Dolphins,13,20,12,296,260,36,3,21,422,323,99,3,-15.77,-1.48,8.12
+Raiders,12,Sun,November 26,4:25PM ET,boxscore,L,,5-7,,Kansas City Chiefs,17,31,16,358,235,123,,23,360,291,69,,6.49,-14.00,-5.90
+Raiders,13,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+Raiders,14,Sun,December 10,4:05PM ET,boxscore,L,,5-8,,Minnesota Vikings,0,3,8,202,146,56,3,16,231,99,132,,-20.46,10.05,6.43
+Raiders,15,Thu,December 14,8:15PM ET,boxscore,W,,6-8,,Los Angeles Chargers,63,21,20,378,254,124,,18,326,234,92,5,22.25,15.82,3.05
+Raiders,16,Mon,December 25,1:00PM ET,boxscore,W,,7-8,@,Kansas City Chiefs,20,14,12,205,48,157,,19,308,223,85,2,-8.40,11.63,3.27
+Raiders,17,Sun,December 31,1:00PM ET,boxscore,L,,7-9,@,Indianapolis Colts,20,23,26,370,286,84,,16,349,215,134,,8.69,-11.41,-1.73
+Raiders,18,Sun,January 7,4:25PM ET,boxscore,W,,8-9,,Denver Broncos,27,14,22,359,230,129,,17,286,238,48,1,12.72,-1.30,0.08
+Chiefs,1,Thu,September 7,8:20PM ET,boxscore,L,,0-1,,Detroit Lions,20,21,17,316,226,90,1,19,368,250,118,1,-4.17,-2.60,2.11
+Chiefs,2,Sun,September 17,1:00PM ET,boxscore,W,,1-1,@,Jacksonville Jaguars,17,9,19,399,298,101,3,18,271,197,74,1,7.01,10.72,-6.76
+Chiefs,3,Sun,September 24,4:25PM ET,boxscore,W,,2-1,,Chicago Bears,41,10,31,456,303,153,2,11,203,87,116,2,20.09,13.60,-1.47
+Chiefs,4,Sun,October 1,8:20PM ET,boxscore,W,,3-1,@,New York Jets,23,20,24,401,197,204,2,18,336,228,108,1,10.22,-3.25,1.48
+Chiefs,5,Sun,October 8,4:25PM ET,boxscore,W,,4-1,@,Minnesota Vikings,27,20,21,333,266,67,,24,329,259,70,1,15.55,-10.22,0.17
+Chiefs,6,Thu,October 12,8:15PM ET,boxscore,W,,5-1,,Denver Broncos,19,8,22,389,293,96,1,14,197,82,115,3,1.99,13.65,-1.97
+Chiefs,7,Sun,October 22,4:25PM ET,boxscore,W,,6-1,,Los Angeles Chargers,31,17,25,483,415,68,2,16,358,219,139,2,19.19,-3.03,-2.58
+Chiefs,8,Sun,October 29,4:25PM ET,boxscore,L,,6-2,@,Denver Broncos,9,24,18,274,212,62,5,19,240,87,153,1,-11.85,1.52,-4.12
+Chiefs,9,Sun,November 5,9:30AM ET,boxscore,W,,7-2,,Miami Dolphins,21,14,16,267,174,93,1,20,292,175,117,1,-1.10,9.86,-1.00
+Chiefs,10,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+Chiefs,11,Mon,November 20,8:15PM ET,boxscore,L,,7-3,,Philadelphia Eagles,17,21,23,336,168,168,2,16,238,124,114,1,-3.40,2.22,-3.61
+Chiefs,12,Sun,November 26,4:25PM ET,boxscore,W,,8-3,@,Las Vegas Raiders,31,17,23,360,291,69,,16,358,235,123,,14.00,-6.49,5.90
+Chiefs,13,Sun,December 3,8:20PM ET,boxscore,L,,8-4,@,Green Bay Packers,19,27,25,337,189,148,1,24,382,253,129,,9.54,-19.21,0.96
+Chiefs,14,Sun,December 10,4:25PM ET,boxscore,L,,8-5,,Buffalo Bills,17,20,21,346,264,82,2,21,327,209,118,1,-2.22,-1.78,-0.36
+Chiefs,15,Mon,December 17,1:00PM ET,boxscore,W,,9-5,@,New England Patriots,27,17,19,326,283,43,2,10,206,154,52,1,-5.95,16.05,-0.09
+Chiefs,16,Mon,December 25,1:00PM ET,boxscore,L,,9-6,,Las Vegas Raiders,14,20,19,308,223,85,2,12,205,48,157,,-11.63,8.40,-3.27
+Chiefs,17,Sun,December 31,4:25PM ET,boxscore,W,,10-6,,Cincinnati Bengals,25,17,15,373,241,132,1,20,263,159,104,,5.05,-1.31,3.55
+Chiefs,18,Sun,January 7,4:25PM ET,boxscore,W,,11-6,@,Los Angeles Chargers,13,12,12,268,145,123,1,22,353,235,118,1,-3.31,8.89,-1.81
+Broncos,1,Sun,September 10,4:25PM ET,boxscore,L,,0-1,,Las Vegas Raiders,16,17,22,260,166,94,,22,261,200,61,1,10.75,-9.59,-3.68
+Broncos,2,Sun,September 17,4:25PM ET,boxscore,L,,0-2,,Washington Commanders,33,35,21,399,277,122,2,26,388,266,122,,11.60,-16.73,3.13
+Broncos,3,Sun,September 24,1:00PM ET,boxscore,L,,0-3,@,Miami Dolphins,20,70,16,363,294,69,3,30,726,376,350,,-13.39,-48.65,12.38
+Broncos,4,Sun,October 1,1:00PM ET,boxscore,W,,1-3,@,Chicago Bears,31,28,17,311,214,97,,26,471,300,171,2,13.54,-13.11,1.50
+Broncos,5,Sun,October 8,4:25PM ET,boxscore,L,,1-4,,New York Jets,21,31,18,308,169,139,3,18,407,173,234,2,-6.26,-5.79,-2.75
+Broncos,6,Thu,October 12,8:15PM ET,boxscore,L,,1-5,@,Kansas City Chiefs,8,19,14,197,82,115,3,22,389,293,96,1,-13.65,-1.99,1.97
+Broncos,7,Sun,October 22,4:25PM ET,boxscore,W,,2-5,,Green Bay Packers,19,17,18,339,194,145,,20,331,194,137,1,9.89,-11.33,2.65
+Broncos,8,Sun,October 29,4:25PM ET,boxscore,W,,3-5,,Kansas City Chiefs,24,9,19,240,87,153,1,18,274,212,62,5,-1.52,11.85,4.12
+Broncos,9,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+Broncos,10,Mon,November 13,8:15PM ET,boxscore,W,,4-5,@,Buffalo Bills,24,22,19,300,178,122,1,18,369,177,192,4,-4.09,0.44,4.65
+Broncos,11,Sun,November 19,8:20PM ET,boxscore,W,,5-5,,Minnesota Vikings,21,20,13,295,249,46,,19,385,210,175,3,-3.68,1.96,5.21
+Broncos,12,Sun,November 26,4:05PM ET,boxscore,W,,6-5,,Cleveland Browns,29,12,17,294,125,169,1,19,269,162,107,3,3.83,14.00,-0.36
+Broncos,13,Sun,December 3,1:00PM ET,boxscore,L,,6-6,@,Houston Texans,17,22,16,282,164,118,3,14,353,264,89,,-4.63,1.15,-0.91
+Broncos,14,Sun,December 10,4:25PM ET,boxscore,W,,7-6,@,Los Angeles Chargers,24,7,19,322,216,106,1,17,283,207,76,2,-1.17,21.60,-2.39
+Broncos,15,Sun,December 16,8:15PM ET,boxscore,L,,7-7,@,Detroit Lions,17,42,20,287,204,83,1,29,448,263,185,,3.20,-29.35,3.14
+Broncos,16,Sun,December 24,8:15PM ET,boxscore,L,,7-8,,New England Patriots,23,26,19,276,193,83,2,12,289,230,59,1,-0.12,1.42,-4.11
+Broncos,17,Sun,December 31,4:25PM ET,boxscore,W,,8-8,,Los Angeles Chargers,16,9,16,313,212,101,,17,301,215,86,1,2.08,5.75,1.20
+Broncos,18,Sun,January 7,4:25PM ET,boxscore,L,,8-9,@,Las Vegas Raiders,14,27,17,286,238,48,1,22,359,230,129,,1.30,-12.72,-0.08
+Dolphins,1,Sun,September 10,4:25PM ET,boxscore,W,,1-0,@,Los Angeles Chargers,36,34,30,536,466,70,2,30,433,200,233,,26.53,-18.83,-3.22
+Dolphins,2,Sun,September 17,8:20PM ET,boxscore,W,,2-0,@,New England Patriots,24,17,22,389,244,145,1,23,288,200,88,2,13.09,0.98,-7.69
+Dolphins,3,Sun,September 24,1:00PM ET,boxscore,W,,3-0,,Denver Broncos,70,20,30,726,376,350,,16,363,294,69,3,48.65,13.39,-12.38
+Dolphins,4,Sun,October 1,1:00PM ET,boxscore,L,,3-1,@,Buffalo Bills,20,48,20,393,251,142,2,24,414,310,104,,-2.09,-27.56,1.37
+Dolphins,5,Sun,October 8,1:00PM ET,boxscore,W,,4-1,,New York Giants,31,16,22,524,302,222,3,15,268,183,85,,10.45,6.46,-1.72
+Dolphins,6,Sun,October 15,1:00PM ET,boxscore,W,,5-1,,Carolina Panthers,42,21,23,424,262,162,1,21,296,188,108,,14.79,6.44,-0.33
+Dolphins,7,Sun,October 22,8:20PM ET,boxscore,L,,5-2,@,Philadelphia Eagles,17,31,12,244,199,45,1,26,355,256,99,2,-7.17,-11.06,2.90
+Dolphins,8,Sun,October 29,1:00PM ET,boxscore,W,,6-2,,New England Patriots,31,17,24,390,312,78,2,13,218,141,77,1,10.64,9.73,-3.59
+Dolphins,9,Sun,November 5,9:30AM ET,boxscore,L,,6-3,@,Kansas City Chiefs,14,21,20,292,175,117,1,16,267,174,93,1,-9.86,1.10,1.00
+Dolphins,10,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+Dolphins,11,Sun,November 19,1:00PM ET,boxscore,W,,7-3,,Las Vegas Raiders,20,13,21,422,323,99,3,12,296,260,36,3,1.48,15.77,-8.12
+Dolphins,12,Fri,November 24,3:00PM ET,boxscore,W,,8-3,@,New York Jets,34,13,22,395,228,167,3,12,159,130,29,2,3.64,20.96,-2.09
+Dolphins,13,Sun,December 3,1:00PM ET,boxscore,W,,9-3,@,Washington Commanders,45,15,20,406,283,123,,11,245,107,138,1,25.98,6.88,-0.52
+Dolphins,14,Mon,December 11,8:15PM ET,boxscore,L,,9-4,,Tennessee Titans,27,28,20,366,208,158,1,22,403,320,83,3,-0.67,-1.86,0.42
+Dolphins,15,Sun,December 17,1:00PM ET,boxscore,W,,10-4,,New York Jets,30,0,16,290,213,77,,11,103,80,23,4,4.37,28.99,-5.48
+Dolphins,16,Sun,December 24,4:25PM ET,boxscore,W,,11-4,,Dallas Cowboys,22,20,22,375,284,91,,19,339,242,97,1,6.06,-8.66,4.74
+Dolphins,17,Sun,December 31,1:00PM ET,boxscore,L,,11-5,@,Baltimore Ravens,19,56,20,375,221,154,3,24,491,331,160,1,-10.36,-31.09,1.21
+Dolphins,18,Sun,January 7,8:20PM ET,boxscore,L,,11-6,,Buffalo Bills,14,21,16,275,167,108,2,26,473,345,128,3,3.92,-12.65,-3.03
+Jets,1,Mon,September 11,8:15PM ET,boxscore,W,OT,1-0,,Buffalo Bills,22,16,13,289,117,172,1,19,314,217,97,4,-1.19,4.85,2.27
+Jets,2,Sun,September 17,4:25PM ET,boxscore,L,,1-1,@,Dallas Cowboys,10,30,12,215,151,64,4,26,382,248,134,,-14.82,-7.01,2.25
+Jets,3,Sun,September 24,1:00PM ET,boxscore,L,,1-2,,New England Patriots,10,15,12,171,133,38,,17,358,201,157,,-15.20,2.13,6.78
+Jets,4,Sun,October 1,8:20PM ET,boxscore,L,,1-3,,Kansas City Chiefs,20,23,18,336,228,108,1,24,401,197,204,2,3.25,-10.22,-1.48
+Jets,5,Sun,October 8,4:25PM ET,boxscore,W,,2-3,@,Denver Broncos,31,21,18,407,173,234,2,18,308,169,139,3,5.79,6.26,2.75
+Jets,6,Sun,October 15,4:25PM ET,boxscore,W,,3-3,,Philadelphia Eagles,20,14,17,244,155,89,,24,348,268,80,4,-7.52,5.91,8.89
+Jets,7,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+Jets,8,Sun,October 29,1:00PM ET,boxscore,W,OT,4-3,@,New York Giants,13,10,12,251,193,58,2,12,194,-9,203,,-20.78,20.38,1.41
+Jets,9,Mon,November 6,8:15PM ET,boxscore,L,,4-4,,Los Angeles Chargers,6,27,17,270,206,64,3,14,191,107,84,,-25.20,6.47,-1.49
+Jets,10,Sun,November 12,8:20PM ET,boxscore,L,,4-5,@,Las Vegas Raiders,12,16,14,365,257,108,1,15,274,126,148,2,-7.21,8.01,-3.38
+Jets,11,Sun,November 19,4:25PM ET,boxscore,L,,4-6,@,Buffalo Bills,6,32,14,155,92,63,4,22,393,263,130,1,-15.34,-14.64,-1.82
+Jets,12,Fri,November 24,3:00PM ET,boxscore,L,,4-7,,Miami Dolphins,13,34,12,159,130,29,2,22,395,228,167,3,-20.96,-3.64,2.09
+Jets,13,Sun,December 3,1:00PM ET,boxscore,L,,4-8,,Atlanta Falcons,8,13,14,259,197,62,3,15,194,104,90,,-20.36,11.41,1.05
+Jets,14,Sun,December 10,1:00PM ET,boxscore,W,,5-8,,Houston Texans,30,6,20,347,268,79,1,10,135,54,81,,2.85,22.37,-3.08
+Jets,15,Sun,December 17,1:00PM ET,boxscore,L,,5-9,@,Miami Dolphins,0,30,11,103,80,23,4,16,290,213,77,,-28.99,-4.37,5.48
+Jets,16,Sun,December 24,1:00PM ET,boxscore,W,,6-9,,Washington Commanders,30,28,26,381,217,164,2,18,245,143,102,3,-15.58,3.65,8.61
+Jets,17,Thu,December 28,8:15PM ET,boxscore,L,,6-10,@,Cleveland Browns,20,37,17,360,253,107,2,20,428,301,127,3,-7.73,-3.15,-3.99
+Jets,18,Sun,January 7,1:00PM ET,boxscore,W,,7-10,@,New England Patriots,17,3,13,254,69,185,1,6,119,31,88,2,-10.78,27.43,-3.32
+Patriots,1,Sun,September 10,4:25PM ET,boxscore,L,,0-1,,Philadelphia Eagles,20,25,24,382,306,76,2,17,251,154,97,1,-12.04,10.42,-4.39
+Patriots,2,Sun,September 17,8:20PM ET,boxscore,L,,0-2,,Miami Dolphins,17,24,23,288,200,88,2,22,389,244,145,1,-0.98,-13.09,7.69
+Patriots,3,Sun,September 24,1:00PM ET,boxscore,W,,1-2,@,New York Jets,15,10,17,358,201,157,,12,171,133,38,,-2.13,15.20,-6.78
+Patriots,4,Sun,October 1,4:25PM ET,boxscore,L,,1-3,@,Dallas Cowboys,3,38,10,253,200,53,3,22,377,253,124,,-26.22,-8.01,-0.20
+Patriots,5,Sun,October 8,1:00PM ET,boxscore,L,,1-4,,New Orleans Saints,0,34,8,156,111,45,3,17,304,168,136,,-33.72,1.91,-3.40
+Patriots,6,Sun,October 15,4:05PM ET,boxscore,L,,1-5,@,Las Vegas Raiders,17,21,17,259,176,83,1,19,348,264,84,1,3.68,-2.79,-5.62
+Patriots,7,Sun,October 22,1:00PM ET,boxscore,W,,2-5,,Buffalo Bills,29,25,21,364,268,96,1,24,339,258,81,2,10.65,-11.63,5.61
+Patriots,8,Sun,October 29,1:00PM ET,boxscore,L,,2-6,@,Miami Dolphins,17,31,13,218,141,77,1,24,390,312,78,2,-9.73,-10.64,3.59
+Patriots,9,Sun,November 5,1:00PM ET,boxscore,L,,2-7,,Washington Commanders,17,20,18,327,220,107,1,23,432,308,124,2,0.28,-3.37,-1.30
+Patriots,10,Sun,November 12,9:30AM ET,boxscore,L,,2-8,,Indianapolis Colts,6,10,21,340,173,167,2,14,264,194,70,1,-0.42,-0.31,-0.28
+Patriots,11,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+Patriots,12,Sun,November 26,1:00PM ET,boxscore,L,,2-9,@,New York Giants,7,10,18,283,136,147,3,10,220,162,58,1,-12.51,12.44,-2.86
+Patriots,13,Sun,December 3,1:00PM ET,boxscore,L,,2-10,,Los Angeles Chargers,0,6,13,257,109,148,1,13,241,212,29,,-13.06,9.06,-4.71
+Patriots,14,Thu,December 7,8:15PM ET,boxscore,W,,3-10,@,Pittsburgh Steelers,21,18,14,303,222,81,1,18,264,182,82,1,-4.53,9.55,-2.96
+Patriots,15,Mon,December 17,1:00PM ET,boxscore,L,,3-11,,Kansas City Chiefs,17,27,10,206,154,52,1,19,326,283,43,2,-16.05,5.95,0.09
+Patriots,16,Sun,December 24,8:15PM ET,boxscore,W,,4-11,@,Denver Broncos,26,23,12,289,230,59,1,19,276,193,83,2,-1.42,0.12,4.11
+Patriots,17,Sun,December 31,1:00PM ET,boxscore,L,,4-12,@,Buffalo Bills,21,27,16,294,191,103,4,19,281,154,127,1,-11.94,-0.15,1.73
+Patriots,18,Sun,January 7,1:00PM ET,boxscore,L,,4-13,,New York Jets,3,17,6,119,31,88,2,13,254,69,185,1,-27.43,10.78,3.32
+Bills,1,Mon,September 11,8:15PM ET,boxscore,L,OT,0-1,@,New York Jets,16,22,19,314,217,97,4,13,289,117,172,1,-4.85,1.19,-2.27
+Bills,2,Sun,September 17,1:00PM ET,boxscore,W,,1-1,,Las Vegas Raiders,38,10,29,450,267,183,,13,240,185,55,3,27.19,4.89,-3.85
+Bills,3,Sun,September 24,1:00PM ET,boxscore,W,,2-1,@,Washington Commanders,37,3,20,386,218,168,1,15,230,125,105,5,10.16,23.07,-1.39
+Bills,4,Sun,October 1,1:00PM ET,boxscore,W,,3-1,,Miami Dolphins,48,20,24,414,310,104,,20,393,251,142,2,27.56,2.09,-1.37
+Bills,5,Sun,October 8,9:30AM ET,boxscore,L,,3-2,,Jacksonville Jaguars,20,25,18,388,359,29,2,29,474,278,196,2,6.27,-13.93,-2.21
+Bills,6,Sun,October 15,8:20PM ET,boxscore,W,,4-2,,New York Giants,14,9,22,297,169,128,2,20,317,185,132,,2.90,-3.02,-6.70
+Bills,7,Sun,October 22,1:00PM ET,boxscore,L,,4-3,@,New England Patriots,25,29,24,339,258,81,2,21,364,268,96,1,11.63,-10.65,-5.61
+Bills,8,Thu,October 26,8:15PM ET,boxscore,W,,5-3,,Tampa Bay Buccaneers,24,18,25,427,312,115,1,17,302,224,78,,9.78,-3.38,-1.24
+Bills,9,Sun,November 5,8:20PM ET,boxscore,L,,5-4,@,Cincinnati Bengals,18,24,21,317,249,68,2,23,397,343,54,,6.05,-14.35,0.96
+Bills,10,Mon,November 13,8:15PM ET,boxscore,L,,5-5,,Denver Broncos,22,24,18,369,177,192,4,19,300,178,122,1,-0.44,4.09,-4.65
+Bills,11,Sun,November 19,4:25PM ET,boxscore,W,,6-5,,New York Jets,32,6,22,393,263,130,1,14,155,92,63,4,14.64,15.34,1.82
+Bills,12,Sun,November 26,4:25PM ET,boxscore,L,OT,6-6,@,Philadelphia Eagles,34,37,29,505,332,173,1,24,378,193,185,2,13.85,-7.60,-9.18
+Bills,13,,,,,,,,,Bye Week,,,,,,,,,,,,,,,
+Bills,14,Sun,December 10,4:25PM ET,boxscore,W,,7-6,@,Kansas City Chiefs,20,17,21,327,209,118,1,21,346,264,82,2,1.78,2.22,0.36
+Bills,15,Sun,December 17,4:25PM ET,boxscore,W,,8-6,,Dallas Cowboys,31,10,28,351,85,266,,14,195,106,89,1,19.98,3.23,-3.82
+Bills,16,Sat,December 23,8:00PM ET,boxscore,W,,9-6,@,Los Angeles Chargers,24,22,16,335,230,105,3,18,273,175,98,,7.67,4.02,-9.12
+Bills,17,Sun,December 31,1:00PM ET,boxscore,W,,10-6,,New England Patriots,27,21,19,281,154,127,1,16,294,191,103,4,0.15,11.94,-1.73
+Bills,18,Sun,January 7,8:20PM ET,boxscore,W,,11-6,@,Miami Dolphins,21,14,26,473,345,128,3,16,275,167,108,2,12.65,-3.92,3.03
