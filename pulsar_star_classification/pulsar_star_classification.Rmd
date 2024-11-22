@@ -1,0 +1,417 @@
+---
+title: 'Pulsar Star Classificiation'
+author: "Hanan Salim"
+date: " "
+output:
+  html_document: 
+    bookdown::html_document2:
+    fig_caption: TRUE
+    toc: yes
+    toc_depth: 4
+    toc_float: yes
+    number_sections: yes
+    toc_collapsed: yes
+    code_folding: hide
+    code_download: yes
+    smooth_scroll: yes
+    theme: lumen
+  word_document: 
+    toc: yes
+    toc_depth: 4
+    fig_caption: yes
+    keep_md: yes
+  pdf_document: 
+    toc: yes
+    toc_depth: 4
+    fig_caption: yes
+    number_sections: yes
+    fig_width: 3
+    fig_height: 3
+editor_options: 
+  chunk_output_type: inline
+---
+
+```{r setup, include=FALSE, warning=FALSE}
+if (!require("knitr")) {
+   install.packages("knitr")
+   library(knitr)
+}
+
+if (!require("dplyr")) {
+   install.packages("dplyr")
+   library(dplyr)
+}
+
+if (!require("ggplot2")) {
+   install.packages("ggplot2")
+   library(ggplot2)
+}
+  
+if (!require("patchwork")) {
+   install.packages("patchwork")
+   library(patchwork)
+}
+
+if (!require("reshape2")) {
+   install.packages("reshape2")
+   library(reshape2)
+}
+
+if (!require("tinytex")) {
+   install.packages("tinytex")
+   library(tinytex)
+}
+
+if (!require("caret")) {
+   install.packages("caret")
+   library(caret)
+}
+
+if (!require("neuralnet")) {
+   install.packages("neuralnet")
+   library(neuralnet)
+}
+
+if (!require("rpart")) {
+   install.packages("rpart")
+   library(rpart)
+}
+
+if (!require("rpart.plot")) {
+   install.packages("rpart.plot")
+   library(rpart.plot)
+}
+
+if (!require("pROC")) {
+   install.packages("pROC")
+   library(pROC)
+}
+
+if (!require("ipred")) {
+   install.packages("ipred")
+   library(ipred)
+}
+
+if (!require("vip")) {
+   install.packages("vip")
+   library(vip)
+}
+
+knitr::opts_chunk$set(echo=FALSE,      # suppress code chunk
+                      warning=FALSE,   # suppress warnings 
+                      results=TRUE,   # suppress output
+                      message=FALSE,   # suppress message
+                      comment=NA)
+```
+
+
+# Introducation
+
+On a dark, clear night, the sky is a canvas dotted with countless stars, shining brightly due to their intense heat. In the 1960s, astronomers began studying these stars through different wavelengths of light and made a surprising discovery: some stars were blinking. While initially, this phenomenon sparked speculation about extraterrestrial life, scientists soon realized that these were unique stars known as pulsars.
+
+Pulsars are formed from the remnants of a massive star that has undergone a supernova explosion. During this cataclysmic event, the star's core collapses under its immense gravity, forming an incredibly dense neutron star. This newly formed neutron star spins rapidly, retaining much of the original star's angular momentum. A pulsar is a special type of neutron star that emits radiation.
+
+```{r fig.align='center', fig.width=4, fig.height=4, fig.cap="Life Cycle of a Star"}
+
+include_graphics("/Users/hsalim/clones/sta551/pulsar_star_classification/stars_lifecycle_full.jpg")
+```
+
+Pulsars possess incredibly strong magnetic fields, which propel particles outward along their magnetic poles. These accelerated particles generate powerful beams of light, causing the pulsating effect observed by astronomers. As the pulsar rotates, these beams sweep across the sky, making them appear to blink.   
+ 
+Pulsars are the lighthouses of the universe and have become important celestial objects to study. Unfortunately, they emit very weak signals which can be lost in background noise when making observations. Pulse emissions from each individual rotation (single pulses), are highly variable from pulse to pulse. To overcome this, we can average multiple single pulses into an integrated pulse profile which is more consistent across different observations and stable in time.
+
+But, an integrated pulse profile is not enough to know if the signal is actually from a pulsar. It could be mixed in with other information or be from a completely different source. This is where the DM-SNR curve comes into play. 
+The DM-SNR curve has two components, the dispersion measure (DM) and signal-to-noise ratio (SNR). SNR measures the strength of a pulsar's signal relative to background noise.The dispersion measure, on the other hand, measures the spread of the pulse. When a pulsar emits a pulse of radiation, it contains a range of frequencies. As this pulse travels through space, the different frequencies travel at slightly different speeds. This causes the pulse to spread out, or disperse, over time. We capture this through the dispersion measure.
+
+The DM is plotted on the x-axis and the SNR on the y-axis which give us the the DM-SNR curve. Notice that since both of these are curves, we can view them as distributions and thus describe them completely by calculating there mean, standard deviation, skewness, and kurtosis. This exactly what our data does. It describes each obsersation based on 8 features which are summarized below.
+
+Our feature are:
+
+	1. `mean_ip` : Mean of the integrated profile \
+	2. `sd_ip` : Standard deviation of the integrated profile \
+	3. `kurtosis_ip` : Excess kurtosis of the integrated profile \
+	4. `skewness_ip` : Skewness of the integrated profile \
+	5. `mean_ds` : Mean of the DM-SNR curve \
+	6. `sd_ds` : Standard deviation of the DM-SNR curve \
+	7. `kurtosis_ds` : Excess kurtosis of the DM-SNR curve \
+	8. `skewness_ds` : Skewness of the DM-SNR curve
+	
+Along with our features we have our response variable under the `results` column. The data set contains 16,259 observations caused by noise, and 1,639 real pulsar observations, for a total of 17898 observations.
+
+```{r fig.align='center', fig.width=4, fig.height=4, fig.cap="Integrated Pulsar Profile"}
+
+include_graphics("/Users/hsalim/clones/sta551/pulsar_star_classification/integrated_pulsar_profile.png")
+```
+
+```{r fig.align='center', fig.width=4, fig.height=4, fig.cap="DM-SNR Curve"}
+
+include_graphics("/Users/hsalim/clones/sta551/pulsar_star_classification/integrated_pulsar_profile.png")
+```
+
+# EDA and Feature Engineering
+```{r}
+data <- read.csv('HTRU_2.csv',header=FALSE)
+names(data) <- c("mean_ip","sd_ip","kurtosis_ip","skewness_ip","mean_ds","sd_ds","kurtosis_ds","skewness_ds","result")
+summary(data)
+```
+We see from the summary statement, that our data does not have any missing data. Furthermore, since our features are statistics describing two distributions, we do not intend to combine or categorize them. But, we would like to assess their distributions. In figure 4, we see that the mean and standard deviation for the integrated pulse profile are slightly skewed, whereas the kurtosis and skewness are strongly skewed. Similarly, in figure 5 we see that all four features associated with the DM-SNR curve are skewed. We may want to log transform our data before downstream analysis.
+
+```{r}
+distributionPlots <- function(df, feature, xtitle) {
+  plot <- ggplot(data=df, aes(x=feature)) + 
+                        geom_density() + 
+                        theme_classic() +
+                        theme(plot.title = element_text(size=10)) +
+                        xlab(xtitle)
+  return(plot)
+}
+```
+
+```{r fig.align='center', , fig.width=4, fig.height=4, fig.cap='Distribution plots of integrated pulse profile statistics'}
+(distributionPlots(data, data$mean_ip, 'mean') + distributionPlots(data, data$sd_ip, 'standard deviation')) /
+  (distributionPlots(data, data$kurtosis_ip, 'kurtosis') + distributionPlots(data, data$skewness_ip, 'skewness')) +   plot_annotation(title = 'Distribution of Integrated Profile Statistics',                                                           tag_levels = 'A',
+                  theme = theme(plot.title = element_text(size = 10)))
+```
+
+
+```{r fig.align='center', , fig.width=4, fig.height=4, fig.cap='Distribution plots of DM-SNR curve statistics'}
+(distributionPlots(data, data$mean_ds, 'mean') + distributionPlots(data, data$sd_ds, 'standard deviation')) /
+  (distributionPlots(data, data$kurtosis_ds, 'kurtosis') + distributionPlots(data, data$skewness_ds, 'skewness')) +   plot_annotation(title = 'Distribution of DM-SNR Curve Statistics',                                                           tag_levels = 'A',
+                  theme = theme(plot.title = element_text(size = 10)))
+```
+
+Figure 6, shows the distribution for each statistic comparing pulsar candidates vs non-pulsar candidates. All features show a strong separation between our response variable categories. From figures 4 and 5, we can see that our features have different scales and are heavily skewed. To fix the scales, we can apply min-max normalization. To fix the skew, we would typically apply a log transformation but since our data has negative values and zeros, we instead apply a negative log transformation shown below.
+$$T(x) = \text{sign}(x) \cdot \log(|x| + 1)$$
+In figure 7, we can see that applying $T(x)$ followed by normalization helps reduce the skew while still retaining separation.
+
+```{r fig.align='center', fig.width=6, fig.height=6, fig.cap="Density plots comparing pulsar candidates vs non-pulsars candidates"}
+data$result <- as.factor(data$result)
+
+resultMelt = melt(data,id='result')
+
+
+pulsarComparison <- ggplot(resultMelt, aes(x=value, colour=result)) + 
+                      geom_density() + 
+                      theme_classic() +
+                      theme(plot.title = element_text(size=10)) +
+                      facet_wrap(~variable, scales = "free")
+
+pulsarComparison
+
+```
+
+```{r}
+min_max_normalization <- function(feature) {
+  normalization <- (feature - min(feature)) / (max(feature) - min(feature))
+  return(normalization)
+}
+
+neglog <- function(feature) {
+  return(sign(feature)*log1p(abs(feature)))
+}
+
+feature_columns <- colnames(data[1:8])
+data <- data %>% mutate(across(all_of(feature_columns), neglog))
+data <- data %>% mutate(across(all_of(feature_columns), min_max_normalization))
+```
+
+```{r fig.align='center', fig.width=6, fig.height=6, fig.cap="Normalized density plots comparing pulsar candidates vs non-pulsars candidates"}
+logMelt = melt(data,id='result')
+
+ggplot(logMelt, aes(x=value, colour=result)) + 
+        geom_density() + 
+        theme_classic() +
+        theme(plot.title = element_text(size=10)) +
+        facet_wrap(~variable, scales = "free")
+```
+
+# Logistic Regression
+The first model we build is a logistic regression model which uses all 8 features. From the output, we can see that the model indexes heavily on the kurtosis of the integrated pulse profiles.
+
+```{r}
+#split data
+trainIndex <- createDataPartition(data$result, p= 0.8, list = FALSE)
+train <- data[trainIndex,]
+test <- data[-trainIndex,]
+```
+
+
+```{r}
+#train
+logistic_model = glm(result ~ ., 
+                     data = train, 
+                     family = binomial)
+
+#test
+predict_logistic <- predict.glm(logistic_model, test, type = "response")
+
+#Evaluate
+category = test$result == 1
+roc_logistic = roc(category, predict_logistic)
+auc_logistic = roc_logistic$auc
+
+sensitivity_logistic = roc_logistic$sensitivities
+fnr_logistic = 1 - roc_logistic$specificities
+```
+
+```{r}
+kable(logistic_model$coefficients, caption = "Logistic Model Coefficent")
+```
+
+
+# Perceptron
+The next model we build is a perception using a logistic activation function. Again, we see that the kurtosis of the integrated pulse profiles has the largest weight.
+
+```{r}
+#create design matrix
+design_matrix_train = model.matrix( ~., data = train)
+design_matrix_test = model.matrix( ~., data = test)
+
+#train
+perceptron_model = neuralnet(result1 ~ mean_ip + sd_ip + kurtosis_ip + skewness_ip + 
+                                       mean_ds + sd_ds + kurtosis_ds + skewness_ds,
+                         data = design_matrix_train,  
+                         hidden = 1,
+                         act.fct = "logistic",     #sigmoid activation function
+                         linear.output = FALSE 
+                         )
+
+#test
+predict_nn = predict(perceptron_model, design_matrix_test, linear.output = FALSE)
+
+#Evaluate
+category = test$result == 1
+roc_nn = roc(category, predict_nn)
+auc_nn = roc_nn$auc
+
+sensitivity_nn = roc_nn$sensitivities
+fnr_nn = 1 - roc_nn$specificities
+```
+
+
+```{r fig.align='center', fig.width=4, fig.height=6, fig.cap="Neural Network Model"}
+plot(perceptron_model, rep="best")
+```
+
+
+# Decision Tree
+To build our third set of models, we will use decision trees. If we build a simple model where false negatives and false positives are equally penalized, we will get only 1 split based on kurtosis of the integrated pulse profile. But, we do not want an equal penalty because in our case, false negatives are worse than false positive. This is because machine learning models are only 1 step in the verification process for detecting pulsars. We would like to use our model to remove as many negative observations while keeping a small subset which can than we verified by a person. Thus, we build to decision tree models, one where false negatives are penalized 10x more than false positive and another with a 50x penalty. 
+
+```{r}
+tree <- rpart(result ~ ., 
+              data = train, 
+              minsplit = 1,
+              parms = list(loss = matrix(c(0, 1, 10, 0), ncol = 2, byrow = TRUE),
+                           split = "information"),
+              method = "class")
+
+predict_tree = predict(tree, test, type='prob')
+
+#Evaluate
+prediction = predict_tree[, "1"]
+category = test$result == 1
+roc_tree = roc(category, prediction)
+auc_tree = roc_tree$auc
+
+sensitivity_tree = roc_tree$sensitivities
+fnr_tree = 1 - roc_tree$specificities
+```
+
+```{r}
+tree50 <- rpart(result ~ ., 
+              data = train, 
+              minsplit = 1,
+              parms = list(loss = matrix(c(0, 1, 50, 0), ncol = 2, byrow = TRUE),
+                           split = "information"),
+              method = "class")
+
+predict_tree50 = predict(tree50, test, type='prob')
+
+#Evaluate
+prediction50 = predict_tree50[, "1"]
+category50 = test$result == 1
+roc_tree50 = roc(category50, prediction50)
+auc_tree50 = roc_tree50$auc
+
+sensitivity_tree50 = roc_tree50$sensitivities
+fnr_tree50 = 1 - roc_tree50$specificities
+```
+
+```{r fig.align='center', fig.width=4, fig.height=4, fig.cap="Decision Tree where false negatives are penalized 50 to 1 compared to false positives"}
+rpart.plot(tree50, main = "Decision Tree")
+```
+
+```{r fig.align='center', fig.width=4, fig.height=4, fig.cap="Decision Tree where false negatives are penalized 10 to 1 compared to false positives"}
+rpart.plot(tree, main = "Decision Tree")
+```
+
+# Bootstrap
+Finally, we build a bagging model which creates 200 trees and assigns a 10x penalty to false negatives. 
+
+```{r}
+#train
+bagging_model <- bagging(result ~ ., 
+                         data = train, 
+                         nbagg = 200,    #number of trees
+                         coob = TRUE, 
+                         parms = list(loss = matrix(c(0, 1, 10, 0), 
+                                                    ncol = 20, 
+                                                    byrow = TRUE),   
+                                                    split = "information"),  
+                         control = rpart.control(minsplit = 2, 
+                                                 cp = 0.02))
+
+#test
+predict_bagging = predict(bagging_model, test, type = "prob")
+
+#Evaluate 
+prediction_bagging = predict_bagging[, "1"]
+category_bagging = test$result == 1
+roc_bagging = roc(category_bagging, prediction_bagging)
+auc_bagging = roc_bagging$auc
+
+sensitivity_bagging = roc_bagging$sensitivities
+fnr_bagging = 1 - roc_bagging$specificities
+```
+
+# Conclusion 
+Below, we plot the ROC curves for all 5 our models. Notice that all 5 perform fairly well with our perceptron and logistic model Performing equally well. There is a small drop off in performance with our decision tree models but this is expected due to our penalty settings. In fact, whatever cutoff we use, we would like to minimize the the false negatives.
+
+```{r fig.width=8, fig.height=8, fig.cap="ROC curves of our 5 models"}
+colors = c( "#ff595e", "#ffca3a", "#8ac926", "#1982c4", "#6a4c93")
+
+plot(fnr_nn, sensitivity_nn, type = "l", lwd = 2,
+     xlim = c(0,1),
+     ylim = c(0,1),
+     xlab = "1 - Specificity",
+     ylab = "Sensitivity",
+     main = "ROC Curves of Candidate Models",col=colors[1])
+
+lines(fnr_logistic, sensitivity_logistic, lwd = 2, lty = 2,col=colors[2])
+lines(fnr_tree, sensitivity_tree, lwd = 2, lty = 2,col=colors[3])
+lines(fnr_tree50, sensitivity_tree50, lwd = 2, lty = 2,col=colors[4])
+lines(fnr_bagging, sensitivity_bagging, lwd = 2, lty = 2,col=colors[5])
+
+segments(0,0,1,1, lwd =1, col = "black", lty = 2)
+
+legend(x=.65,y=.65, 
+       c("neural network", "logistic regression", "decision tree (FN=10)", "decision tree (FN=50)", "Bagging"), 
+       col=c(colors, "black"), 
+       lwd=c(2,2,1,1,1),
+       lty=c(1,2,1,1,2), 
+       bty = "n", 
+       cex = 0.7)
+
+## annotating AUC
+text(0.87, 0.25, paste("AUC NN = ", round(auc_nn,4)), col=colors[1], cex = 0.7, adj = 1)
+text(0.87, 0.20, paste("AUC Logistics = ", round(auc_logistic,4)), col=colors[2], cex = 0.7, adj = 1)
+text(0.87, 0.15, paste("AUC Tree 10 = ", round(auc_tree,4)), col=colors[3], cex = 0.7, adj = 1)
+text(0.87, 0.10, paste("AUC Tree 50 = ", round(auc_tree50,4)), col=colors[4], cex = 0.7, adj = 1)
+text(0.87, 0.05, paste("AUC Bagging = ", round(auc_bagging,4)), col=colors[5], cex = 0.7, adj = 1)
+
+```
+
+
+# References
+1. Lyon, R. J., Stappers, B. W., Cooper, S., Brooke, J. M., & Knowles, J. D. (2016). Fifty years of pulsar candidate selection: from simple filters to a new principled real-time classification approach. Monthly Notices of the Royal Astronomical Society, 459(1), 1104-1123.
+2. Wang, Y., Pan, Z., Zheng, J., Qian, L., & Li, M. (2019). A hybrid ensemble method for pulsar candidate classification. Astrophysics and Space Science, 364, 1-13.
