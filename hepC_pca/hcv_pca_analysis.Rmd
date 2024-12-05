@@ -1,0 +1,362 @@
+---
+title: 'Hepatitis C and Unsupervised Learning'
+author: "Hanan Salim"
+date: " "
+output:
+  html_document: 
+    bookdown::html_document2:
+    fig_caption: TRUE
+    toc: yes
+    toc_depth: 4
+    toc_float: yes
+    number_sections: yes
+    toc_collapsed: yes
+    code_folding: hide
+    code_download: yes
+    smooth_scroll: yes
+    theme: lumen
+  word_document: 
+    toc: yes
+    toc_depth: 4
+    fig_caption: yes
+    keep_md: yes
+  pdf_document: 
+    toc: yes
+    toc_depth: 4
+    fig_caption: yes
+    number_sections: yes
+    fig_width: 3
+    fig_height: 3
+editor_options: 
+  chunk_output_type: inline
+---
+
+```{r setup, include=FALSE, warning=FALSE}
+if (!require("knitr")) {
+   install.packages("knitr")
+   library(knitr)
+}
+
+if (!require("dplyr")) {
+   install.packages("dplyr")
+   library(dplyr)
+}
+
+if (!require("ggplot2")) {
+   install.packages("ggplot2")
+   library(ggplot2)
+}
+  
+if (!require("patchwork")) {
+   install.packages("patchwork")
+   library(patchwork)
+}
+
+if (!require("reshape2")) {
+   install.packages("reshape2")
+   library(reshape2)
+}
+
+if (!require("tinytex")) {
+   install.packages("tinytex")
+   library(tinytex)
+}
+
+if (!require("caret")) {
+   install.packages("caret")
+   library(caret)
+}
+
+if (!require("neuralnet")) {
+   install.packages("neuralnet")
+   library(neuralnet)
+}
+
+if (!require("rpart")) {
+   install.packages("rpart")
+   library(rpart)
+}
+
+if (!require("rpart.plot")) {
+   install.packages("rpart.plot")
+   library(rpart.plot)
+}
+
+if (!require("pROC")) {
+   install.packages("pROC")
+   library(pROC)
+}
+
+if (!require("ipred")) {
+   install.packages("ipred")
+   library(ipred)
+}
+
+if (!require("vip")) {
+   install.packages("vip")
+   library(vip)
+}
+
+if (!require("ggfortify")) {
+   install.packages("ggfortify")
+   library(vip)
+}
+
+if (!require("dbscan")) {
+   install.packages("dbscan")
+   library(dbscan)
+}
+
+if (!require("cluster")) {
+   install.packages("cluster")
+   library(cluster)
+}
+
+if (!require("factoextra")) {
+   install.packages("factoextra")
+   library(factoextra)
+}
+
+knitr::opts_chunk$set(echo=FALSE,      # suppress code chunk
+                      warning=FALSE,   # suppress warnings 
+                      results=TRUE,   # suppress output
+                      message=FALSE,   # suppress message
+                      comment=NA)
+```
+
+# Introduction
+Hepatitis C is a viral infection caused by a blood borne pathogen, the hepatitis C virus (HCV). If left untreated this can lead to serious damage to the liver or cancer. 
+
+The virus attacks the liver which leads to an immune response, releasing various types of fibrosis proteins, like collagen, to repair the damage. Unfortunately, these proteins can build up within the liver and cause scarring. This scar tissue build up is called fibrosis. Over time this can lead to the death of liver cells and eventually liver failure. 
+
+To measure the progression of the disease, we can measure fibrosis. The stages are as follows:
+  Stage 0: no fibrosis
+  Stage 1: mild fibrosis without walls of scarring
+  Stage 2: mild to moderate fibrosis with walls of scarring
+  Stage 3: bridging fibrosis or scarring that has spread to different parts of the liver but no cirrhosis
+  Stage 4: severe scarring, or cirrhosis
+
+
+Our data has the following columns:
+
+  1. `X`: patient ID \        
+  2. `Category`: response variable \
+  3. `Age`: age of the patient  \   
+  4. `Sex`: sex of the patient \      
+  5. `ALB`: Albumin \      
+  6. `ALP`: Alkaline phosphatase
+  7. `ALT`: alanine amino-transferase \      
+  8. `AST`: aspartate amino-transferase \
+  9. `BIL`: bilirubin \      
+  10. `CHE`: choline esterase \  
+  11. `CHOL`: cholesterol
+  12. `CREA`: creatinine
+  13. `GGT`:  $\gamma$-glutamyl-transferase
+  14. `PROT`: metalloproteinase 1
+  
+Our response variable has five categories:
+
+  1. Blood Donor
+  2. Suspect Blood Donor
+  3. Hepatitis
+  4. Fibrosis
+  5. Cirrhosis
+  
+Our goal in this project is to perform PCA and clustering on our data. We would also like to detect outliers via local outlier factor (LOF) by creating a binary variable from our response variable.
+
+# EDA and Feature Engineering
+
+From our summary statement below we can see that we have missing values in many of our columns. We can see what percentage of our observations are missing in the table below. We handle these missing values, my using mean imputation. As the first figure shows, the imputed values for ALP show a similar distribution to the original data.
+
+```{r}
+data <- read.csv('hcv_data.txt')
+summary(data)
+```
+
+```{r}
+data_imputed <- data
+for(i in 1:ncol(data_imputed)) {
+  if(is.numeric(data_imputed[[i]])) {
+    data_imputed[[i]][is.na(data_imputed[[i]])] <- mean(data_imputed[[i]], na.rm = TRUE)
+  }
+}
+```
+
+```{r fig.align='center', fig.width=4, fig.height=4, fig.cap="Imputed vs Original Data"}
+ggplot(data, aes(x=ALP, fill="Original")) +
+  geom_density(alpha=0.3) +
+  geom_density(data=data_imputed, aes(x=ALP, fill="Imputed"), alpha=0.3) +
+  labs(title="Density Plot of ALP: Original vs. Imputed")
+
+```
+
+
+```{r fig.align='center', fig.width=12, fig.height=10, fig.cap="Density plots of features across disease progression"}
+data_imputed$Category <- as.factor(data$Category)
+
+numerical_data <- data_imputed %>% select(-X,-Age, -Sex)
+
+categoryMelt = melt(numerical_data,id='Category')
+
+
+hcvComparison <- ggplot(categoryMelt, aes(x=value, colour=Category)) + 
+                      geom_density() + 
+                      theme_classic() +
+                      theme(plot.title = element_text(size=10)) +
+                      scale_color_brewer(palette = "Set2") +
+                      facet_wrap(~variable, scales = "free")
+
+hcvComparison
+
+
+```
+We would now like to check the distribution of our features. From the second figure, we can see that our data is fairly skewed. To fix the skew, we would typically apply a log transformation but since our data has negative values and zeros, we instead apply a negative log transformation shown below.
+$$T(x) = \text{sign}(x) \cdot \log(|x| + 1)$$
+
+From the log transformed plot, we see that our data is less skewed but also shows better seperation between each category.
+
+```{r}
+min_max_normalization <- function(feature) {
+  normalization <- (feature - min(feature)) / (max(feature) - min(feature))
+  return(normalization)
+}
+
+neglog <- function(feature) {
+  return(sign(feature)*log1p(abs(feature)))
+}
+
+feature_columns <- colnames(numerical_data[2:11])
+numerical_data <- numerical_data %>% mutate(across(all_of(feature_columns), neglog))
+```
+
+
+```{r fig.align='center', fig.width=12, fig.height=10, fig.cap="Normalized density plots of features across disease progession"}
+categoryMelt = melt(numerical_data,id='Category')
+
+hcvLogComparison <- ggplot(categoryMelt, aes(x=value, colour=Category)) + 
+                      geom_density() + 
+                      theme_classic() +
+                      theme(plot.title = element_text(size=10)) +
+                      scale_color_brewer(palette = "Set2") +
+                      facet_wrap(~variable, scales = "free")
+
+hcvLogComparison
+```
+
+# Prinicipal Component Analysis
+
+From our scree plot, we can see that after 5 components,we see a leveling off. From the table, we can see that the first component captures about 25% percent of the variance and the first 5 components, all together, capture about 75%.
+
+```{r fig.align='center', fig.width=5, fig.height=3.5}
+hcv.pca <- prcomp(na.omit(numerical_data[2:11]), center = TRUE, scale = TRUE)
+
+screeplot(hcv.pca, 
+          type = "lines",
+          main = "Scree Plot of HCV data")
+```
+```{r}
+kable(summary(hcv.pca)$importance, caption="The importance of each principal component")
+```
+
+# Clustering Data
+We would like to use this data to perform k-means cluster. First, we would like to determine how many clusters are optimal. Intuitively, we know our data should have 4-5 clusters. To double check, we create an elbow plot which agrees with our initial intuition but the WSS score does not level off as sharply.
+
+Furthermore, from our clustering plot, we can see that our clusters don't look great. This not surprising since PC1 and PC2 only capture about 45% of the variance.
+
+```{r, fig.align='center', fig.width=5, fig.height=3.5}
+pc_data <- hcv.pca$x[,1:5]
+
+wss = NULL
+K = 15
+
+for (i in 1:K){
+  wss[i] = kmeans(pc_data, i, 1 )$tot.withinss
+}
+
+## elbow plot
+plot(1:K, wss, type ="b",
+          col= "blue",
+          xlab="Number of Clusters",
+          ylab = "WSS",
+          main = "Elbow Plot for Selecting Optimal Number of Clusters")
+
+```
+
+```{r fig.align='center', fig.width=4, fig.height=4}
+clusters <- kmeans(x = pc_data, 
+             centers = 4, 
+             iter.max = 10,
+             nstart = 25,
+             algorithm = "Lloyd",
+             trace = FALSE)
+
+fviz_pca_ind(hcv.pca,
+             habillage = clusters$cluster,
+             label = "none"
+             )
+
+```
+
+
+
+# Anomaly Detection
+
+We begin by creating a binary variable from our response variable. If the `category` column was labeled as either Blood Donor or suspect Blood Donor, we label it as 0. Otherwise we label is as 1. From there we, implement LOF on our original data, using multiple $k$ values ($k=50,100,125,150,175$). From the output, we can see that the larger values have a better area under the curve but with dimishing returns. Thus, in our case, we would choose $k=175$ as our value.
+
+```{r}
+numerical_data <- numerical_data %>% 
+                      mutate(response = case_when(Category ==  "0=Blood Donor" ~ 0,
+                                                  Category == "0s=suspect Blood Donor" ~ 0,
+                                                  Category == "1=Hepatitis" ~ 1,
+                                                  Category == "2=Fibrosis" ~ 1,
+                                                  Category == "3=Cirrhosis" ~ 1))
+  
+lof50  <- lof(numerical_data[2:11], minPts = 50)
+lof100 <- lof(numerical_data[2:11], minPts = 100)
+lof125 <- lof(numerical_data[2:11], minPts = 125)
+lof150 <- lof(numerical_data[2:11], minPts = 150)
+lof175 <- lof(numerical_data[2:11], minPts = 175)
+```
+
+
+```{r fig.align='center', fig.width=6, fig.height=6}
+category = as.character(numerical_data$response)
+
+calculate_roc <- function(cat, lofn) {
+  roc_lof <- roc(cat, lofn, levels=c("1", "0"), direction = ">")
+
+  sen_lof = roc_lof$sensitivities
+  fnr_lof = 1 - roc_lof$specificities
+  
+  AUC = roc_lof$auc
+  
+  return(list(sen_lof, fnr_lof, AUC))
+}
+
+roc50 <- calculate_roc(category, lof50)
+roc100 <- calculate_roc(category, lof100)
+roc125 <- calculate_roc(category, lof125)
+roc150 <- calculate_roc(category, lof150)
+roc175 <- calculate_roc(category, lof175)
+
+colors = c( "#ff595e", "#ffca3a", "#8ac926", "#1982c4", "#6a4c93")
+plot(roc50[[2]], roc50[[1]] , type = "l", lwd = 1, col = colors[1],
+     xlim = c(0,1),
+     ylim = c(0,1),
+     xlab = "1 - specificity",
+     ylab = "sensitivity",
+     main = "ROC Curves of LOF Detection")
+
+segments(0,0,1,1, lwd =1, col = "red", lty = 2)
+
+lines(roc100[[2]], roc100[[1]], lwd = 1, col = colors[2])
+lines(roc125[[2]], roc125[[1]], lwd = 1, col = colors[3])
+lines(roc150[[2]], roc150[[1]], lwd = 1, col = colors[4])
+lines(roc175[[2]], roc175[[1]], lwd = 1, col = colors[5])
+
+text(0.87, 0.20, paste("AUC 50 = ", round(roc50[[3]],4)), col=colors[1], cex = 0.7, adj = 1)
+text(0.87, 0.25, paste("AUC 100 = ", round(roc100[[3]],4)), col=colors[2], cex = 0.7, adj = 1)
+text(0.87, 0.30, paste("AUC 125 = ", round(roc125[[3]],4)), col=colors[3], cex = 0.7, adj = 1)
+text(0.87, 0.35, paste("AUC 150 = ", round(roc150[[3]],4)), col=colors[4], cex = 0.7, adj = 1)
+text(0.87, 0.40, paste("AUC 175 = ", round(roc175[[3]],4)), col=colors[5], cex = 0.7, adj = 1)
+```
