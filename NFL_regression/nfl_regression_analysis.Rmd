@@ -1,6 +1,6 @@
 ---
-title: 'Regression Analysis'
-author: " (You are expected to give a descriptive title)"
+title: 'Regression Analysis of NFL Boxscore Statistics'
+author: "Hanan Salim"
 date: " "
 output:
   html_document: 
